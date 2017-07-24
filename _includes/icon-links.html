@@ -1,40 +1,49 @@
-<!-- and guess where these are defined? Yup, you guessed it: the _config.yml file -->
 {% if site.resume_social_links %}
+
+
+
 <ul class="icon-links">
+
+  <!-- LinkedIn link -->
+  {% if site.resume_social_links.resume_linkedin_url %}
+    {% assign linkedin_url_print = site.resume_social_links.resume_linkedin_url | split: "://" | shift %}
+    <li class="icon-link-item"><a target="_blank" href="{{ site.resume_social_links.resume_linkedin_url }}" class="icon-link" itemprop="url">{% include icons/icon-linkedin.html %} <div class="print_link">{{ linkedin_url_print }}</div></a></li>
+  {% endif %}
 
   <!-- GitHub link -->
   {% if site.resume_social_links.resume_github_url %}
-  <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_github_url }}" class="icon-link" itemprop="url">{% include icons/icon-github.html %}</a></li>
+    {% assign github_url_print = site.resume_social_links.resume_github_url | split: "://" | shift %}
+    <li class="icon-link-item"><a target="_blank" href="{{ site.resume_social_links.resume_github_url }}" class="icon-link" itemprop="url">{% include icons/icon-github.html %} <div class="print_link">{{ github_url_print }}</div></a></li>
   {% endif %}
 
   <!-- Twitter link -->
   {% if site.resume_social_links.resume_twitter_url %}
-  <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_twitter_url }}" class="icon-link" itemprop="url">{% include icons/icon-twitter.html %}</a></li>
+    {% assign twitter_url_print = site.resume_social_links.resume_twitter_url | split: "://" | shift %}
+    <li class="icon-link-item"><a target="_blank" href="{{ site.resume_social_links.resume_twitter_url }}" class="icon-link" itemprop="url">{% include icons/icon-twitter.html %} <div class="print_link">{{ twitter_url_print }}</div></a></li>
   {% endif %}
 
   <!-- Dribbble link -->
   {% if site.resume_social_links.resume_dribbble_url %}
-  <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_dribbble_url }}" class="icon-link" itemprop="url">{% include icons/icon-dribbble.html %}</a></li>
+    {% assign dribble_url_print = site.resume_social_links.resume_dribble_url | split: "://" | shift %}
+    <li class="icon-link-item"><a target="_blank" href="{{ site.resume_social_links.resume_dribbble_url }}" class="icon-link" itemprop="url">{% include icons/icon-dribbble.html %} <div class="print_link">{{ dribbble_url_print }}</div></a></li>
   {% endif %}
 
   <!-- Facebook link -->
   {% if site.resume_social_links.resume_facebook_url %}
-  <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_facebook_url }}" class="icon-link" itemprop="url">{% include icons/icon-facebook.html %}</a></li>
-  {% endif %}
-
-  <!-- LinkedIn link -->
-  {% if site.resume_social_links.resume_linkedin_url %}
-  <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_linkedin_url }}" class="icon-link" itemprop="url">{% include icons/icon-linkedin.html %}</a></li>
+    {% assign facebook_url_print = site.resume_social_links.resume_facebook_url | split: "://" | shift %}
+    <li class="icon-link-item"><a target="_blank" href="{{ site.resume_social_links.resume_facebook_url }}" class="icon-link" itemprop="url">{% include icons/icon-facebook.html %} <div class="print_link">{{ facebook_url_print }}</div></a></li>
   {% endif %}
 
   <!-- Instagram link -->
   {% if site.resume_social_links.resume_instagram_url %}
-  <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_instagram_url }}" class="icon-link" itemprop="url">{% include icons/icon-instagram.html %}</a></li>
+    {% assign instagram_url_print = site.resume_social_links.resume_instagram_url | split: "://" | shift %}
+    <li class="icon-link-item"><a target="_blank" href="{{ site.resume_social_links.resume_instagram_url }}" class="icon-link" itemprop="url">{% include icons/icon-instagram.html %} <div class="print_link">{{ instagram_url_print }}</div></a></li>
   {% endif %}
 
   <!-- Website link -->
   {% if site.resume_social_links.resume_website_url %}
-  <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_website_url }}" class="icon-link" itemprop="url">{% include icons/icon-website.html %}</a></li>
+    {% assign website_url_print = site.resume_social_links.resume_website_url | split: "://" | shift %}
+    <li class="icon-link-item"><a target="_blank" href="{{ site.resume_social_links.resume_website_url }}" class="icon-link" itemprop="url">{% include icons/icon-website.html %} <div class="print_link">{{ website_url_print }}</div></a></li>
   {% endif %}
 
 </ul>

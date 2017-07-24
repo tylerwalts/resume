@@ -1,4 +1,8 @@
 _site
 .sass-cache
+<<<<<<< HEAD
 .DS_Store
 _vendor
+=======
+.DS_Store
+>>>>>>> Initial commit based on jglovier resume template + modified the header to flow inline and have contact info.

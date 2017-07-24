@@ -1,6 +1,6 @@
 # Site settings
-title: "Jekyll Resume Template"
-description: "A resume template for Jekyll and GitHub Pages sites."
+title: "Tyler Walters - Resume"
+description: "Multi-media resume for Tyler Walters."
 
 # Build settings
 markdown: kramdown
@@ -9,42 +9,330 @@ sass:
   style: compressed
 
 # Resume settings
-resume_avatar:                  "true"
-resume_name:                    "Homer J. Simpson"
-resume_title:                   "Nuclear Safety Inspector"
-resume_contact_email:
-  "homerjsimpson@youremailaddress.com"
-resume_header_contact_info: "742 Evergreen Terrace, Springfield | 555-7334 | homerjsimpson@youremailaddress.com"
-resume_header_intro: "<p>This is the executive summary. You should write a few brief, concise, and meaningful sentences about yourself from a professional context, and your immediate career goals. Make the length appropriate for your needs, but K.I.S.S.</p>"
+resume_avatar:        "true"
+resume_name:          "Tyler Walters"
+resume_title:         "IT Consultant"
+resume_contact:
+  email: "tyler@tylerwalts.com"
+  phone: "503-741-9183"
+  address1: "107 N. Cook St. #322"
+  address2: "Portland, OR 97227"
+resume_summary: "Entrepreneurial enterprise IT consultant with 15 years experience building solutions and teams for businesses.  Continuously looking to improve technical breadth and depth while delivering interesting and impactful solutions."
+
+resume_experiences:
+  - organization: "Slalom Cross Market Delivery"
+    title: "Solution Principal"
+    start: "2010"
+    end: "Present"
+    location: "Chicago, IL"
+    description: "Delivery leader in the cross-market (XM) delivery center for enterprise clients in Slalom's 25 locations with responsibilities of technical delivery, sales support, recruiting, career development, project oversight and practice development.  Founder of the DevOps group in XM."
+    bullets:
+      - "People manager supporting career development for 15 direct reports."
+      - "Supported pursuit and led delivery of 7 projects driving over $8M revenue over 5 years."
+      - "Project oversight for up to 22 developers, architectural design and technical escalations."
+      - "Delivered Cloud and AWS Bootcamps, tech talks, conferences and hackathons."
+  - organization: "Hitachi Consulting"
+    title: "Senior Consultant"
+    start: "2006"
+    end: "2010"
+    location: "Portland, OR"
+    description: "Project-based app dev consultant for the Education, Retail, Manufacturing, Distribution, Finance, Healthcare, IT and Waste Management industries."
+  - organization: "WitMatix Web Development Services"
+    title: "Owner, Consultant"
+    start: "2004"
+    end: "2006"
+    location: "Corvallis, OR"
+    description: "Started a web development and online services company and managed a team of local resources and outsourced project teams to create custom apps and e-commerce systems."
+  #- organization: "PEAK Internet Services Provider"
+    #title: "Network Engineer & Application Development"
+    #start: "2002"
+    #end: "2004"
+    #location: "Corvallis, OR"
+    #description: "Provided hosting custom development services for an Internet Services Provider (ISP).  Created a billing and account management system based on PHP."
+
+resume_clients:
+  - name: "Echo Global Logistics"
+    industry: "Transportation Logistics"
+    description: "Integrated an acquired stack of IT services using IaC approaches, Chef, .NET, Hyper-V, Azure, TerraForm and DataDog."
+  - name: "Western Governors University"
+    industry: "Online Education"
+    description: "Designed a Data CI pipeline for defining data as code using Liquibase (Datical), Chef, Vagrant and Jenkins."
+  - name: "Qlik Technologies"
+    industry: "BI Software"
+    description: "Lead architect and initial operations of QlikCloud.com, providing Qlik SaaS.  Automated and/or designed the operational processes and transitioned ownership to the new Qlik Cloud department.  Delivered a global and elastic system using: MEAN stack for front-end; AWS*, CloudFormation, Puppet for IaC; Consul, New Relic for operations; BlazeMeter, SauceLabs for automated testing; Atlassian suite for PM and CI/CD."
+  - name: "Pepsi"
+    industry: "Retail Drinks"
+    description: "Supported analysis of vending maching metrics by defining Talend, RDS and Tableau servers as code using CloudFormation on AWS."
+  - name: "Law Bulletin"
+    industry: "Legal Services"
+    description: "Transformed legal docket management system from on-premise Oracle/Liferay/Solr/Jasper stack to AWS using MySQL on RDS, EC2, ELB, SQS, SES and S3.  Led the cloud vendor selection process and demonstrated better consistency, agility and sprint velocity using Puppet and CloudFormation for IaC, and more quality, governance and team coordination by using Atlassian Bamboo for CI/CD, and JIRA for work management."
+  - name: "Walgreens"
+    industry: "Retail Pharmacy"
+    description: "Architect of a time-sensitive data de-identification process to meet compliance deadlines and avoid disruption of reporting services."
+  - name: "Blue Cross Blue Shield of Michigan"
+    industry: "Health Insurance"
+    description: "First engineer on a new member portal for insurance members to manage accounts and claims.  Scaled team to 22 developers and enabled remote delivery by mocking production RedHat/WebSphere/Oracle environments in both AWS and local laptops using EC2, Vagrant and an IaC CI/CD approach to delivery.  Used Backbonejs, Java Spring; Liquibase for MySQL/Oracle; CloudFormation and Puppet."
+  - name: "Providence Health & Services"
+    industry: "Health Provider"
+    description: "Founded Healthcare Intelligence unit for applying BI principles, tooling and governance to operational and research data marts.  Defined roles, processes and delivered analysis support for bundled knee operations and stroke services using MSBI and Tableau."
+  - name: "Standard Insurance"
+    industry: "Insurance Provider"
+    description: "Introduced Microsoft BI stack (MSBI) and converted a set of underwriting reports migrated from Cognos.  Defined servers partially as code and documented manual customization processes.  Created center of excellence to define security, governance and training plan."
+  - name: "Russell Investments"
+    industry: "Financial Services"
+    description: "Created SalesForce app to assess which accounts to invest relationship management in, and a dashboard view for users."
+  - name: "CorVel Software"
+    industry: "Software"
+    description: "Created a form generation and workflow application to automate the on-boarding of each of their new clients using C# .NET."
+  - name: "Waste Management"
+    industry: "Waste Management"
+    description: "Upgraded, optimized, re-designed and integrated Greenopolis.com site to ThinkGreenRewards.WM.com, and added a portal interface to provide the UI for recycling kiosks.  Automated enironment cloning of the drupal LAMP stack using drush and bash."
+  - name: "Nike"
+    industry: "Sporting Goods"
+    description: "Used an IaC approach to defining a Vendor Management workflow system using SharePoint site templates, custom C# web parts and scripts."
+  - name: "Microsoft"
+    industry: "Software"
+    description: "Prepared hands-on data visualization workshop examples and authored 2 Green IT whitepaper articles for VisioToolbox.com in preparation for a Green IT conference.  Mocked out HVAC sensor data generation, harvested in MySQL and binded to Visio to visualize data center temps."
+  - name: "Johnstone Supply"
+    industry: "Distribution"
+    description: "Enhanced data-driven marketing decisions and automated price setting for retail locations.  Implemented MSBI stacks and configured daily intake, processing and analysis of retail store sales, costs and inventory CSVs using SSIS, SSAS and SSRS.  Developed price setting UI to support region-specific campaigns based on predictive values."
+  - name: "Cascade Corporation"
+    industry: "Manufacturing"
+    description: "Customized reports and tooling machine code to stamp load bearing data on forklift parts to meet new regulations."
+  - name: "Columbia Sportswear"
+    industry: "Sporting Goods"
+    description: "Updated corporate social responsibility app that enabled inspectors to remote factory locations offline, then automatically synchronize data when they come back online.  Used C# .NET and XML-based data storage."
+  - name: "Knowledge Learning Corporation"
+    industry: "Education"
+    description: "Created kiosk time-clock software to allow parents and teachers to check children in/out, and administration UI for compliance, performace and financial reporting using Java Struts and Oracle.  Developed set of reports to asess marketing campaign effectiveness."
+  - name: "WitMatix Clients (< 2006)"
+    industry: "Software"
+    description: "LAMP/Joomla sites for new and small ventures: Symmetry-SSG.com, SunRoseSheep.com, RendezvousPCs.com, RoachWear.biz, GetFlossin.com, HeadTracker.com, BerkshireTownhomes.com, MottoRX.com, ChristianQuarter.com, BuyGoodMusic.com and others."
+
+
+
+resume_educations:
+  - organization: "Oregon State University"
+    degree: "Master"
+    subject: "Business Administration"
+    option: "Entrepreneurship"
+    start: "2002"
+    end: "2004"
+    bullets:
+       - "MBA Association Treasurer"
+  - organization: "Oregon State University"
+    degree: "Bachelor"
+    subject: "Computer Science"
+    option: "Systems"
+    start: "1999"
+    end: "2002"
+    bullets:
+       - "Linux User Group VP"
+
+resume_projects:
+  - name: "Alexa: Quest Game"
+    role: "Author"
+    start: "2016"
+    end: "Present"
+    description: "An Alexa skill inspired by the Choose Your Own Adventure book series."
+  - name: "Oracle Java Puppet Module"
+    link: "https://github.com/tylerwalts/puppet-jdk_oracle"
+    role: "Author"
+    start: "2012"
+    end: "Present"
+    description: "Automates accepting the TOS, downloading and custom installing Oracle Java."
+  #- name: "Decision Matrix"
+    #link: "todo"
+    #role: "Author"
+    #start: "2015"
+    #end: "Present"
+    #description: "A framework for supporting complex decisions with multiple stakeholders."
+  - name: "Kegbot Puppet Module"
+    link: "https://forge.puppet.com/burdara/kegbot"
+    role: "Developer"
+    start: "2012"
+    end: "2013"
+    description: "A puppet module for automating the server configuration of the kegbot system."
+
+
+resume_skills:
+  - name: "Languages"
+    skill_items:
+      - name: "JavaScript"
+        rating: 4
+      - name: "Ruby"
+        rating: 4
+      - name: "Java"
+        rating: 4
+      - name: "HTML/CSS"
+        rating: 4
+      - name: "Bash"
+        rating: 4
+      - name: "PHP"
+        rating: 3
+      - name: "PowerShell"
+        rating: 3
+      - name: "C# .NET"
+        rating: 3
+  - name: "Frameworks"
+    skill_items:
+      - name: "Puppet"
+        rating: 5
+      - name: "Chef"
+        rating: 4
+      - name: "MEAN"
+        rating: 3
+      - name: "SharePoint"
+        rating: 4
+      - name: "Drupal"
+        rating: 4
+      - name: "Spring"
+        rating: 3
+      - name: "Joomla"
+        rating: 3
+      - name: "Jekyll"
+        rating: 3
+  - name: "Business Intelligence"
+    skill_items:
+      - name: "SSRS/SSIS/SSAS"
+        rating: 4
+      - name: "Oracle, MySQL"
+        rating: 3
+      - name: "Qlik, Tableau"
+        rating: 3
+      - name: "Hadoop / Pig"
+        rating: 3
+      - name: "Spark / Zeppelin"
+        rating: 3
+      - name: "MongoDB"
+        rating: 3
+      - name: "Redis"
+        rating: 3
+  - name: "Cloud Development"
+    skill_items:
+      - name: "CI/CD"
+        rating: 5
+      - name: "Agile Delivery"
+        rating: 3
+      - name: "AWS, GCE, Azure"
+        rating: 4
+      - name: "Terraform"
+        rating: 4
+      - name: "Consul"
+        rating: 4
+      - name: "Bamboo/Jenkins"
+        rating: 4
+      - name: "Distributed Systems"
+        rating: 2
+
+
+
+resume_recognitions:
+  - title: "Slalom 5 Year Award"
+    details: "2015"
+    description: "For staying with Slalom for 5 years."
+  - title: "Cheers 4 Peers Award"
+    details: "2009."
+    description: "For peer recognition at Hitachi Consulting."
+
+resume_certifications:
+  - title: "AWS Certified Solutions Architect"
+    link: "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+    authority: "Amazon Web Services"
+    year: "2014"
+  - title: "Microsoft SharePoint Architect"
+    link: "https://www.microsoft.com/en-us/learning/exam-70-573.aspx"
+    authority: "Microsoft"
+    license_number: "70-573"
+    year: "2010"
+
+  - title: "MCPD: SharePoint Developer 2010"
+    link: "https://www.microsoft.com/en-us/learning/mcsd-sharepoint-apps-certification.aspx"
+    authority: "Microsoft"
+    license_number: "70-573CS"
+    year: "2010"
+  - title: "MCST: Microsoft Office SharePoint Server 2007 - Configuration"
+    link: "https://www.microsoft.com/en-us/learning/exam-70-573.aspx"
+    authority: "Microsoft"
+    license_number: "70-630"
+    year: "2010"
+
+
+resume_publications:
+  - title: "Qlik Cloud Case Studies"
+    year: "2015"
+    links:
+      - "https://aws.amazon.com/solutions/case-studies/qlik/"
+      - "https://www.slalom.com/work/customer-story/qlik-cloud-technology"
+      - "https://www.youtube.com/watch?v=3B49y3rjbw4"
+      - "https://qlikcloud.com/"
+    description: "The QlikCloud.com solution showcased by Qlik, Slalom and AWS for how the thick client software was converted to social SaaS, the rapid implementation time and its global scaling elasticity."
+  #- title: "Slalom Profile: Tyler Walters"
+    #link: "https://www.slalom.com/people-profile-tyler-walters"
+    #source: "Slalom.com"
+    #year: "2012"
+  - title: "DrupalCon: Case Studies in Social Commerce"
+    links:
+      - "https://sf2010.drupal.org/conference/sessions/case-studies-social-commerce-waste-managements-greenopolis-mattelcom.html"
+      - "http://www.wm.com/thinkgreen/index.jsp"
+    year: "2010"
+    description: "Co-presented on how WM used Drupal in Greenopolis.com and ThinkGreenRewards.wm.com."
+  - title: "Microsoft VisioToolbox.com:  Green IT How-Tos and Code"
+    links:
+      - "http://web.archive.org/web/20100114051717/http://visiotoolbox.com/downloads/gogreen/How%20To%20-%20Set%20Up%20HVAC%20Monitoring%20with%20Visio.pdf"
+      - "http://web.archive.org/web/20100602035846/http://visiotoolbox.com/downloads/gogreen/How-To-Analyze-Rack-Server-Virtualization.pdf"
+      - "http://web.archive.org/web/20100414101219/http://visiotoolbox.com/Green_IT/"
+    year: "2009"
+    description: "How-Tos  and code from creating a workshop and CD distribution using MS Visio for Green IT."
+   #How-To articles on how to use Microsoft Visio to visualize the physical temperature, humidity and other HVAC data metrics in a data center building, and how to use the SCOM integration to analyse rack virtualization.
+  - title: "Weatherford Entreprenership Incubator"
+    links:
+      - "http://www.gazettetimes.com/business/the-weatherford-way-young-entrepreneurs-take-over-a-renovated-osu/article_1a52181b-f4f7-5842-a030-def45229a24e.html"
+      - "http://www.gazettetimes.com/business/alum-s-advice-com/article_73a95797-0388-5e60-849c-d0a8a62cf3d6.html"
+    year: "2004"
+    description: "Founded WitMatix.com web development services in the OSU entrepreneurship incubator."
+
+
+resume_interests:
+  - "Family"
+  - "Outdoors"
+  - "Traveling"
+  - "Triathlons"
+  - "Electronics"
+  - "Drone racing"
+  - "Open source"
+  - "Network for Teaching Entrepreneurship (NFTE)"
+  - "Habitat for Humanity"
+  - "Ronald McDonald House"
+
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
-# or remove the resume_looking_for_work option entirely
-# to leave blank
-resume_looking_for_work:        "yes"
+# or remove the resume_looking_for_work option entirely to leave blank
+#resume_looking_for_work:        "yes"
 
 # Decide which sections to use
 # comment out to hide
 resume_section_experience:      true
+resume_section_clients:         true
 resume_section_education:       true
 resume_section_projects:        true
 resume_section_skills:          true
-resume_section_recognition:     true
-resume_section_links:           true
-resume_section_associations:    true
-# resume_section_interests:       true
+resume_section_recognition:     false
+resume_section_certifications:  true
+resume_section_publications:    true
+resume_section_footer:          false
 
 # Resume social links
 # uncomment the options you wish to display, and add your own URL
 resume_social_links:
-  resume_github_url:            "https://github.com/jglovier/resume-template"
-  resume_twitter_url:           "http://twitter.com/jglovier"
-  resume_dribbble_url:          "https://dribbble.com/jag"
-  # resume_facebook_url:          "insert Facebook URL here"
-  resume_linkedin_url:          "https://www.linkedin.com/in/joelglovier"
-  # resume_instagram_url:         "insert your Instagram URL here"
-  resume_website_url:           "http://joelglovier.com"
-resume_print_social_links:      true
+  resume_github_url:            "https://github.com/tylerwalts"
+  resume_twitter_url:           "https://twitter.com/tylerwalts"
+  #resume_dribble_url:            "insert Dribble URL here"
+  #resume_facebook_url:          "insert Facebook URL here"
+  resume_linkedin_url:          "https://linkedin.com/in/tylerwalts"
+  #resume_instagram_url:         "insert your Instagram URL here"
+  resume_website_url:           "http://tylerwalts.com"
 
 # Design settings
 resume_theme:                   default
