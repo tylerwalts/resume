@@ -17,13 +17,27 @@ resume_contact:
   phone: "503-741-9183"
   address1: "107 N. Cook St. #322"
   address2: "Portland, OR 97227"
-resume_summary: "Entrepreneurial enterprise IT consultant with 15 years experience building solutions and teams for businesses.  Continuously looking to improve technical breadth and depth while delivering interesting and impactful solutions."
+resume_summary: "
+Generalist IT Consultant currently focused on interactive AR experiences for Retail consumers.  Passionate about combining programming, robotics, FX, lights, screens, sensors and humans to create cool things and scale reach.
+"
 
 resume_experiences:
+  - organization: "Nike"
+    title: "Tech Lead: Trial Zone"
+    start: "2016"
+    end: "Present"
+    location: "Portland, OR"
+    description: "Joined Nike to intake an agency-created retail experience POC and create a team to secure, standardize and scale it to US, Europe and China retail locations."
+    bullets:
+      - "The Trial Zone team currently supports dozens of digitally enhanced running and basketball experiences in 8 flagship Nike retail locations."
+      - "CI/CD has been implemented to support a fleet of on-site servers and sensors and a set of cloud-based microservices and operational tooling to support them."
+      - "Planning the next tier of the scaling to more locations while looking to expand features, ROI monitoring, product integration and add more virtual experience venues."
+
+resume_consulting:
   - organization: "Slalom Cross Market Delivery"
     title: "Solution Principal"
     start: "2010"
-    end: "Present"
+    end: "2016"
     location: "Chicago, IL"
     description: "Delivery leader in the cross-market (XM) delivery center for enterprise clients in Slalom's 25 locations with responsibilities of technical delivery, sales support, recruiting, career development, project oversight and practice development.  Founder of the DevOps group in XM."
     bullets:
@@ -314,6 +328,7 @@ resume_interests:
 # Decide which sections to use
 # comment out to hide
 resume_section_experience:      true
+resume_section_consulting:      true
 resume_section_clients:         true
 resume_section_education:       true
 resume_section_projects:        true

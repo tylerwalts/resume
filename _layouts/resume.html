@@ -79,11 +79,41 @@
         {% endif %}
       </header>
 
+      {% if site.resume_section_consulting %}
+      <!-- begin Consulting Experience -->
+      <section class="content-section">
+        <header class="section-header">
+          <h2>Consulting Experience</h2>
+        </header>
+        <div class="resume-item">
+          {% for conslutant in site.resume_consulting %}
+          <div class="resume-item-list">
+
+            <section class="content-section">
+              <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+                  <h3 class="resume-item-title" itemprop="name">{{ conslutant.organization }} &bull; {{ conslutant.title }} &bull; {{conslutant.location}}</h3>
+                  <p class="resume-item-copy"> {{ conslutant.start }} &mdash; {{ conslutant.end }} &bull; {{ conslutant.description }}</p>
+                <ul class="resume-item-list">
+                  {% for bullet in conslutant.bullets %}
+                  <li>{{ bullet }}</li>
+                  {% endfor %}
+                </ul>
+              </div><!-- end of resume-item -->
+            </section>
+
+
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+      <!-- end Clients -->
+      {% endif %}
+
       {% if site.resume_section_clients %}
       <!-- begin Clients -->
       <section class="content-section">
         <header class="section-header">
-          <h2>Client Engagements</h2>
+          <h2>Past Client Engagements</h2>
         </header>
         <div class="resume-item">
           {% for client in site.resume_clients %}
@@ -110,7 +140,7 @@
           <!-- begin Projects -->
           <section class="content-section">
             <header class="section-header">
-              <h2>Projects</h2>
+              <h2>Side Projects</h2>
             </header>
             {% for project in site.resume_projects %}
             <div class="resume-item">
