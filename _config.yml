@@ -18,7 +18,7 @@ resume_contact:
   address1: "107 N. Cook St. #322"
   address2: "Portland, OR 97227"
 resume_summary: "
-Generalist IT Consultant currently focused on interactive AR experiences for Retail consumers.  Passionate about combining programming, robotics, FX, lights, screens, sensors and humans to create cool things and scale reach.
+IT Consultant currently focused on building and scaling interactive AR experiences for Retail consumers.  Passionate about combining programming, robotics, FX, lights, screens, sensors and humans to create cool things.
 "
 
 resume_experiences:
@@ -27,10 +27,11 @@ resume_experiences:
     start: "2016"
     end: "Present"
     location: "Portland, OR"
-    description: "Joined Nike to intake an agency-created retail experience POC and create a team to secure, standardize and scale it to US, Europe and China retail locations."
+    description: "Joined Nike to intake an agency-created retail experience POC and create a team to secure, standardize and scale the system to US, Europe and China retail locations."
     bullets:
-      - "The Trial Zone team currently supports dozens of digitally enhanced running and basketball experiences in 8 flagship Nike retail locations."
-      - "CI/CD has been implemented to support a fleet of on-site servers and sensors and a set of cloud-based microservices and operational tooling to support them."
+      - "The Trial Zone team supports digitally enhanced running and basketball experiences in 8 flagship Nike retail locations."
+      - "Implemented CI/CD to maintain a fleet of on-site servers with sensors and a set of cloud-based services and tooling to support them."
+      - "Refactored Unity3D games to have configurable assets to support product and venue-specific experiences."
       - "Planning the next tier of the scaling to more locations while looking to expand features, ROI monitoring, product integration and add more virtual experience venues."
 
 resume_consulting:
@@ -144,6 +145,12 @@ resume_educations:
        - "Linux User Group VP"
 
 resume_projects:
+  - name: "Drone Racing"
+    link: "http://www.multigp.com/user/view/tylerwalts"
+    role: "Pilot"
+    start: "2016"
+    end: "2017"
+    description: "Build and race drones in MultiGP."
   - name: "Alexa: Quest Game"
     role: "Author"
     start: "2016"
