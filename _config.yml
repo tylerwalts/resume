@@ -14,16 +14,31 @@ resume_name:          "Tyler Walters"
 resume_title:         "IT Consultant"
 resume_contact:
   email: "tyler@tylerwalts.com"
-  phone: "503-741-9183"
-  address1: "107 N. Cook St. #322"
-  address2: "Portland, OR 97227"
-resume_summary: "Entrepreneurial enterprise IT consultant with 15 years experience building solutions and teams for businesses.  Continuously looking to improve technical breadth and depth while delivering interesting and impactful solutions."
+  phone: "503-309-3201"
+  address1: "9490 SW Imperial Drive"
+  address2: "Portland, OR 97225"
+resume_summary: "
+IT Consultant focused on building, scaling and automating interactive AR experiences for Retail consumers.  Passionate about combining code, services, sensors and IoT devices to create memorable experiences.
+"
 
 resume_experiences:
+  - organization: "Nike"
+    title: "Tech Lead: Trial Zone"
+    start: "2016"
+    end: "Present"
+    location: "Portland, OR"
+    description: "Joined Nike to intake an agency-created retail experience POC and create a team to secure, standardize and scale the system to US, Europe and China retail locations."
+    bullets:
+      - "Support digital running and basketball experiences in flagship Nike retail locations."
+      - "Implemented CI/CD to maintain a fleet of on-site servers with sensors and a set of cloud-based services and tooling to support them."
+      - "Set up dashboards for operational support and financial reporting."
+      - "Refactored Unity3D games to have configurable assets to support product, language and venue-specific experiences."
+
+resume_consulting:
   - organization: "Slalom Cross Market Delivery"
     title: "Solution Principal"
     start: "2010"
-    end: "Present"
+    end: "2016"
     location: "Chicago, IL"
     description: "Delivery leader in the cross-market (XM) delivery center for enterprise clients in Slalom's 25 locations with responsibilities of technical delivery, sales support, recruiting, career development, project oversight and practice development.  Founder of the DevOps group in XM."
     bullets:
@@ -130,6 +145,12 @@ resume_educations:
        - "Linux User Group VP"
 
 resume_projects:
+  - name: "Drone Racing"
+    link: "http://www.multigp.com/user/view/tylerwalts"
+    role: "Pilot"
+    start: "2016"
+    end: "Present"
+    description: "Build and race drones in MultiGP."
   - name: "Alexa: Quest Game"
     role: "Author"
     start: "2016"
@@ -139,7 +160,7 @@ resume_projects:
     link: "https://github.com/tylerwalts/puppet-jdk_oracle"
     role: "Author"
     start: "2012"
-    end: "Present"
+    end: "2017"
     description: "Automates accepting the TOS, downloading and custom installing Oracle Java."
   #- name: "Decision Matrix"
     #link: "todo"
@@ -314,6 +335,7 @@ resume_interests:
 # Decide which sections to use
 # comment out to hide
 resume_section_experience:      true
+resume_section_consulting:      true
 resume_section_clients:         true
 resume_section_education:       true
 resume_section_projects:        true
@@ -332,7 +354,7 @@ resume_social_links:
   #resume_facebook_url:          "insert Facebook URL here"
   resume_linkedin_url:          "https://linkedin.com/in/tylerwalts"
   #resume_instagram_url:         "insert your Instagram URL here"
-  resume_website_url:           "http://tylerwalts.com"
+  #resume_website_url:           "http://tylerwalts.com"
 
 # Design settings
 resume_theme:                   default
