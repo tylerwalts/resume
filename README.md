@@ -2,6 +2,8 @@
 
 Responsive Resume for Tyler Walters
 
+See:  http://resume.tylerwalts.com
+
 ## Docs
 
 ### Running locally
