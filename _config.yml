@@ -66,7 +66,7 @@ resume_consulting:
 resume_clients:
   - name: "Nike"
     industry: "Retail Experience"
-    description: - "(2016 - 2018) Supported retail running and basketball experiences using Microsoft Kinect sensors, cameras, screens and services. Implemented CI/CD to maintain a fleet of on-site servers in US, Europe and China retail locations. Set up operational dashboards, financial reporting and refactored Unity3D-based experience to use configurable assets to align with product launches."
+    description: "(2016 - 2018) Supported retail running and basketball experiences using Microsoft Kinect sensors, cameras, screens and services. Implemented CI/CD to maintain a fleet of on-site servers in US, Europe and China retail locations. Set up operational dashboards, financial reporting and refactored Unity3D-based experience to use configurable assets to align with product launches."
   - name: "Echo Global Logistics"
     industry: "Transportation Logistics"
     description: "Integrated an acquired stack of IT services using IaC approaches, Chef, .NET, Hyper-V, Azure, TerraForm and DataDog."

@@ -8,9 +8,16 @@ See:  http://resume.tylerwalts.com
 
 ### Running locally
 
-To test locally, run the following in your terminal:
+#### Dependencies
 
-1. Clone repo locally
+This consistently works:
+* Launch EC2 micro instance, Amazon Linux.
+* Install rvm & ruby 2.3: `rvm install 2.3`
+* Install bundler: `gem install bundler`
+
+To test locally:
+
+1. Clone repo
 1. `bundle install`
 1. `bundle exec jekyll serve`
 1. Open your browser to `localhost:4000`
