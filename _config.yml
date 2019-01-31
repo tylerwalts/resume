@@ -18,21 +18,29 @@ resume_contact:
   address1: "9490 SW Imperial Drive"
   address2: "Portland, OR 97225"
 resume_summary: "
-IT Consultant focused on building, scaling and automating interactive AR experiences for Retail consumers.  Passionate about combining code, services, sensors and IoT devices to create memorable experiences.
+    IT Consultant focused on implementing cloud-based services which are secure, scale and can be operationally automated.  Passionate about combining code, services, and devices to create memorable experiences.
 "
 
 resume_experiences:
+  - organization: "Amazon Web Services"
+    title: "Cloud Architect"
+    start: "2018"
+    end: "Present"
+    location: "Portland, OR"
+    description: "Worked with Professional Services to help customers implement solutions powered by AWS."
+    bullets:
+      - "Alexa Music Skills, Developer Experience Team: Helped deliver self-service music skill creation ability to Alexa, including support for Apple Music launch.  Designed and implemented music skill metadata store and customer-specific music skill retrieval APIs."
+      - "Portland General Electric: Implemented AWS Landing Zone and IAM SSO to help bridge legacy datacenter with a multi-account cloud usage strategy."
+
   - organization: "Nike"
     title: "Tech Lead: Trial Zone"
     start: "2016"
-    end: "Present"
+    end: "2018"
     location: "Portland, OR"
-    description: "Joined Nike to intake an agency-created retail experience POC and create a team to secure, standardize and scale the system to US, Europe and China retail locations."
+    description: - "Supported retail running and basketball experiences using Microsoft Kinect sensors, cameras, screens and services."
     bullets:
-      - "Support digital running and basketball experiences in flagship Nike retail locations."
-      - "Implemented CI/CD to maintain a fleet of on-site servers with sensors and a set of cloud-based services and tooling to support them."
-      - "Set up dashboards for operational support and financial reporting."
-      - "Refactored Unity3D games to have configurable assets to support product, language and venue-specific experiences."
+      - "Implemented CI/CD to maintain a standardized fleet of on-site servers in US, Europe and China retail locations."
+      - "Set up operational dashboards, financial reporting and refactored Unity3D-based experience to use configurable assets to align with product launches."
 
 resume_consulting:
   - organization: "Slalom Cross Market Delivery"
