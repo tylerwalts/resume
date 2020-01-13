@@ -31,6 +31,9 @@ resume_experiences:
     bullets:
       - "Alexa Music Skills, Developer Experience Team: Helped deliver self-service music skill creation ability to Alexa, including support for Apple Music launch.  Designed and implemented music skill metadata store and customer-specific music skill retrieval APIs."
       - "Portland General Electric: Implemented AWS Landing Zone and IAM SSO to help bridge legacy datacenter with a multi-account cloud usage strategy."
+      - "Voice Automation Project: Worked between AWS Lex and Data Science teams building a POC voice service.  Created a custom voice-UI integration testing framework and automated ingestion of audio utterances to create test data."
+      - "DoorDash: Replaced 3rd-party cloud deployment tooling and integrated Jenkins with AWS CodeDeploy on ECS for canary deployments, faster rollbacks and multi-region support."
+      - "WholeFoods: Re-platformed online catering ordering website, 'eStore' on AWS and integrated with internal Amazon systems: wholefoodsmarket.com/shop/"
 
 resume_consulting:
   - organization: "Slalom Cross Market Delivery"
