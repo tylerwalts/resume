@@ -10,14 +10,14 @@ See:  http://resume.tylerwalts.com
 
 #### Dependencies
 
-This consistently works:
-* Launch EC2 micro instance, Amazon Linux.
+This consistently works on mac/ec2:
 * Install rvm & ruby 2.3: `rvm install 2.3`
 * Install bundler: `gem install bundler`
 
 To test locally:
 
 1. Clone repo
+1. `rvm use 2.3`
 1. `bundle install`
 1. `bundle exec jekyll serve`
 1. Open your browser to `localhost:4000`
