@@ -57,7 +57,7 @@
               {% for experience in site.data.experiences %}
               <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                   <h3 class="resume-item-title" itemprop="name">{{ experience.organization }} &bull; {{ experience.title }} &bull; {{experience.location}}</h3>
-                  <p class="resume-item-copy"> {{ experience.start }} &mdash; {{ experience.end }} &bull; {{ experience.description }}</p>
+                  <p class="resume-item-copy"> {{ experience.start }} &rarr; {{ experience.end }} &bull; {{ experience.description }}</p>
                 <ul class="resume-item-list">
                   {% for bullet in experience.bullets %}
                   <li>{{ bullet }}</li>
@@ -91,7 +91,7 @@
             <section class="content-section">
               <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                   <h3 class="resume-item-title" itemprop="name">{{ experience.organization }} &bull; {{ experience.title }} &bull; {{experience.location}}</h3>
-                  <p class="resume-item-copy"> {{ experience.start }} &mdash; {{ experience.end }} &bull; {{ experience.description }}</p>
+                  <p class="resume-item-copy"> {{ experience.start }} &rarr; {{ experience.end }} &bull; {{ experience.description }}</p>
                 <ul class="resume-item-list">
                   {% for bullet in experience.bullets %}
                   <li>{{ bullet }}</li>
@@ -119,7 +119,7 @@
             <section class="content-section">
               <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                   <h3 class="resume-item-title" itemprop="name">{{ conslutant.organization }} &bull; {{ conslutant.title }} &bull; {{conslutant.location}}</h3>
-                  <p class="resume-item-copy"> {{ conslutant.start }} &mdash; {{ conslutant.end }} &bull; {{ conslutant.description }}</p>
+                  <p class="resume-item-copy"> {{ conslutant.start }} &rarr; {{ conslutant.end }} &bull; {{ conslutant.description }}</p>
                 <ul class="resume-item-list">
                   {% for bullet in conslutant.bullets %}
                   <li>{{ bullet }}</li>
@@ -177,7 +177,7 @@
                 {{ project.role }}
               </h3>
               <p class="resume-item-copy">
-                {{ project.start }} &mdash; {{ project.end }}
+                {{ project.start }} &rarr; {{ project.end }}
                 &bull;
                 {{ project.description }}
               </p>
