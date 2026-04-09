@@ -1,12 +1,23 @@
-# Projects
-# donutfinder.io
-- project: donutfinder.io
-  role: Founder & Primary Developer
-  duration: 2012 &mdash; Present
-  description: Donut Locator is an open source node/ember app that lets users find donuts within a defined radius from their home.
-
-#Springfield Donut Eater's User Group
-- project: Springfield Donut Eater's User Group
-  role: Co-Founder & Organizer
-  duration: 2007 &mdash; Present
-  description: DEUG is a local monthly meetup in Springfield where we share all the latest tips and tricks for dat donut lifestyle. I organize the group, and typically eat most of the donuts.
+- name: "Drone Racing"
+  link: "http://www.multigp.com/user/view/tylerwalts"
+  role: "Pilot"
+  start: "2016"
+  end: "Present"
+  description: "Build and race drones in MultiGP."
+- name: "Alexa: Quest Game"
+  role: "Author"
+  start: "2016"
+  end: "Present"
+  description: "An Alexa skill inspired by the Choose Your Own Adventure book series."
+- name: "Oracle Java Puppet Module"
+  link: "https://github.com/tylerwalts/puppet-jdk_oracle"
+  role: "Author"
+  start: "2012"
+  end: "2017"
+  description: "Automates accepting the TOS, downloading and custom installing Oracle Java."
+- name: "Kegbot Puppet Module"
+  link: "https://forge.puppet.com/burdara/kegbot"
+  role: "Developer"
+  start: "2012"
+  end: "2013"
+  description: "A puppet module for automating the server configuration of the kegbot system."

@@ -1,0 +1,27 @@
+- title: "Qlik Cloud Case Studies"
+  year: "2015"
+  links:
+    - "https://aws.amazon.com/solutions/case-studies/qlik/"
+    - "https://www.slalom.com/work/customer-story/qlik-cloud-technology"
+    - "https://www.youtube.com/watch?v=3B49y3rjbw4"
+    - "https://qlikcloud.com/"
+  description: "The QlikCloud.com solution showcased by Qlik, Slalom and AWS for how the thick client software was converted to social SaaS, the rapid implementation time and its global scaling elasticity."
+- title: "DrupalCon: Case Studies in Social Commerce"
+  links:
+    - "https://sf2010.drupal.org/conference/sessions/case-studies-social-commerce-waste-managements-greenopolis-mattelcom.html"
+    - "http://www.wm.com/thinkgreen/index.jsp"
+  year: "2010"
+  description: "Co-presented on how WM used Drupal in Greenopolis.com and ThinkGreenRewards.wm.com."
+- title: "Microsoft VisioToolbox.com:  Green IT How-Tos and Code"
+  links:
+    - "http://web.archive.org/web/20100114051717/http://visiotoolbox.com/downloads/gogreen/How%20To%20-%20Set%20Up%20HVAC%20Monitoring%20with%20Visio.pdf"
+    - "http://web.archive.org/web/20100602035846/http://visiotoolbox.com/downloads/gogreen/How-To-Analyze-Rack-Server-Virtualization.pdf"
+    - "http://web.archive.org/web/20100414101219/http://visiotoolbox.com/Green_IT/"
+  year: "2009"
+  description: "How-Tos and code from creating a workshop and CD distribution using MS Visio for Green IT."
+- title: "Weatherford Entrepreneurship Incubator"
+  links:
+    - "http://www.gazettetimes.com/business/the-weatherford-way-young-entrepreneurs-take-over-a-renovated-osu/article_1a52181b-f4f7-5842-a030-def45229a24e.html"
+    - "http://www.gazettetimes.com/business/alum-s-advice-com/article_73a95797-0388-5e60-849c-d0a8a62cf3d6.html"
+  year: "2004"
+  description: "Founded WitMatix.com web development services in the OSU entrepreneurship incubator."

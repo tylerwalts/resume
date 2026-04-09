@@ -1,0 +1,16 @@
+- organization: "Oregon State University"
+  degree: "Master"
+  subject: "Business Administration"
+  option: "Entrepreneurship"
+  start: "2002"
+  end: "2004"
+  bullets:
+     - "MBA Association Treasurer"
+- organization: "Oregon State University"
+  degree: "Bachelor"
+  subject: "Computer Science"
+  option: "Systems"
+  start: "1999"
+  end: "2002"
+  bullets:
+     - "Linux User Group VP"

@@ -4,28 +4,28 @@
   <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %}">
     <div class="wrapper" itemscope itemtype="http://schema.org/Person">
       <header class="page-header">
-        {% if site.resume_avatar == 'true' %}
+        {% if site.data.profile.avatar == 'true' %}
         <img src="images/avatar.jpg" alt="my photo" class="avatar no-print" itemprop="image">
         {% endif %}
         <div class="name-and-title">
-          <h1 class="header-name" itemprop="name">{{ site.resume_name }}</h1>
-          <h2 class="header-title" itemprop="jobTitle">{{ site.resume_title }}</h2>
+          <h1 class="header-name" itemprop="name">{{ site.data.profile.name }}</h1>
+          <h2 class="header-title" itemprop="jobTitle">{{ site.data.profile.title }}</h2>
         </div>
         <div class="contact-info">
-            {{ site.resume_contact.phone }} <br />
-            {{ site.resume_contact.address1 }} <br />
-            {{ site.resume_contact.address2 }} <br />
-            {{ site.resume_contact.email }}
+            {{ site.data.profile.contact.phone }} <br />
+            {{ site.data.profile.contact.address1 }} <br />
+            {{ site.data.profile.contact.address2 }} <br />
+            {{ site.data.profile.contact.email }}
         </div>
         <div class="shaded-bar">
           <div class="shaded-top-right-side one-third">
 
             {% include icon-links.html %}
 
-            {% if site.resume_section_education %}
+            {% if site.data.sections.education %}
             <!-- begin Education -->
             <section class="content-section">
-              {% for education in site.resume_educations %}
+              {% for education in site.data.educations %}
               <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
                   <h3 class="resume-item-title" itemprop="name">
                     {{ education.degree }} of {{ education.subject }}
@@ -48,13 +48,13 @@
 
           <div class="shaded-top-left-side two-thirds">
             <div class="executive-summary" itemprop="description">
-              <p>{{ site.resume_summary }}</p>
+              <p>{{ site.data.profile.summary }}</p>
             </div>
 
-            {% if site.resume_section_experience %}
+            {% if site.data.sections.experience %}
             <!-- begin Experience -->
             <section class="content-section">
-              {% for experience in site.resume_experiences %}
+              {% for experience in site.data.experiences %}
               <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                   <h3 class="resume-item-title" itemprop="name">{{ experience.organization }} &bull; {{ experience.title }} &bull; {{experience.location}}</h3>
                   <p class="resume-item-copy"> {{ experience.start }} &mdash; {{ experience.end }} &bull; {{ experience.description }}</p>
@@ -71,22 +71,22 @@
 
           </div> <!-- end shaded-top-left-side -->
         </div> <!-- end shaded-bar -->
-        {% if site.resume_looking_for_work == 'yes' %}
-        <a href="mailto:{{ site.resume_contact_email }}" class="contact-button" itemprop="email">Contact me</a>
-        {% elsif site.resume_looking_for_work == 'no' %}
+        {% if site.data.profile.looking_for_work == 'yes' %}
+        <a href="mailto:{{ site.data.profile.contact.email }}" class="contact-button" itemprop="email">Contact me</a>
+        {% elsif site.data.profile.looking_for_work == 'no' %}
         <a class="contact-button not-looking">I'm not looking for work right now.</a>
         {% else %}
         {% endif %}
       </header>
 
-      {% if site.resume_section_employment %}
+      {% if site.data.sections.employment %}
       <!-- begin Prior Experience -->
       <section class="content-section">
         <header class="section-header">
           <h2>Prior Experience</h2>
         </header>
         <div class="resume-item">
-          {% for experience in site.resume_employment %}
+          {% for experience in site.data.employment %}
           <div class="resume-item-list">
             <section class="content-section">
               <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
@@ -106,14 +106,14 @@
       <!-- end Prior Experience -->
       {% endif %}
 
-      {% if site.resume_section_consulting %}
+      {% if site.data.sections.consulting %}
       <!-- begin Consulting Experience -->
       <section class="content-section">
         <header class="section-header">
           <h2>Consulting Experience</h2>
         </header>
         <div class="resume-item">
-          {% for conslutant in site.resume_consulting %}
+          {% for conslutant in site.data.consulting %}
           <div class="resume-item-list">
 
             <section class="content-section">
@@ -136,14 +136,14 @@
       <!-- end Clients -->
       {% endif %}
 
-      {% if site.resume_section_clients %}
+      {% if site.data.sections.clients %}
       <!-- begin Clients -->
       <section class="content-section">
         <header class="section-header">
           <h2>Past Client Engagements</h2>
         </header>
         <div class="resume-item">
-          {% for client in site.resume_clients %}
+          {% for client in site.data.clients %}
           <div class="resume-item-list">
             <p class="client-item">
               <span class="client-name">
@@ -163,13 +163,13 @@
       <div class="shaded-bar">
         <div class="shaded-bottom-left-side one-third">
 
-          {% if site.resume_section_projects %}
+          {% if site.data.sections.projects %}
           <!-- begin Projects -->
           <section class="content-section">
             <header class="section-header">
               <h2>Side Projects</h2>
             </header>
-            {% for project in site.resume_projects %}
+            {% for project in site.data.projects %}
             <div class="resume-item">
               <h3 class="resume-item-details">
                 {{ project.name }}
@@ -190,7 +190,7 @@
         <!-- end shaded-bottom-left-side -->
         </div><div class="shaded-bottom-right-side two-thirds">
 
-          {% if site.resume_section_skills %}
+          {% if site.data.sections.skills %}
           <!-- begin Skills -->
           <section class="content-section">
             <header class="section-header">
@@ -198,7 +198,7 @@
             </header>
 
             <div class="skills">
-              {% for skill in site.resume_skills %}
+              {% for skill in site.data.skills %}
               <div class="skill-column one-fourth">
                 <h4 class="skill-name">{{ skill.name }}</h4>
                 <ul class="skill-items">
@@ -220,13 +220,13 @@
       <div class="clear-bar">
         <div class="clear-bottom-left-side two-thirds">
 
-          {% if site.resume_section_publications %}
+          {% if site.data.sections.publications %}
           <!-- begin Publications -->
           <section class="content-section">
             <header class="section-header">
               <h2>Publications</h2>
             </header>
-            {% for publication in site.resume_publications %}
+            {% for publication in site.data.publications %}
             <div class="resume-item">
               <h3 class="resume-item-details publication-title">
                   {{ publication.title }}
@@ -253,13 +253,13 @@
         <!-- end clear-botom-left-side -->
         </div><div class="clear-bottom-right-side one-third">
 
-          {% if site.resume_section_recognition %}
+          {% if site.data.sections.recognition %}
           <!-- begin Recognition -->
           <section class="content-section">
             <header class="section-header">
               <h2>Recognition</h2>
             </header>
-            {% for recognition in site.resume_recognitions %}
+            {% for recognition in site.data.recognitions %}
             <div class="resume-item">
               <h3 class="resume-item-title" itemprop="award">{{ recognition.title }}</h3>
               <h4 class="resume-item-details">{{ recognition.details }}</h4>
@@ -270,13 +270,13 @@
           <!-- end Recognition -->
           {% endif %}
 
-          {% if site.resume_section_certifications %}
+          {% if site.data.sections.certifications %}
           <!-- begin Certifications -->
           <section class="content-section">
             <header class="section-header">
               <h2>Certifications</h2>
             </header>
-            {% for certification in site.resume_certifications %}
+            {% for certification in site.data.certifications %}
             <div class="resume-item">
               <h3 class="resume-item-details">
                 {{ certification.title }}
@@ -298,9 +298,9 @@
         </div> <!-- end clear-botom-right-side -->
       </div> <!-- end clear-bar -->
 
-      {% if site.resume_section_footer %}
+      {% if site.data.sections.footer %}
       <footer class="page-footer">
-        <p class="footer-line"><a href="mailto://{{ site.resume_contact.email }}">Contact Me</a>.</p>
+        <p class="footer-line"><a href="mailto://{{ site.data.profile.contact.email }}">Contact Me</a>.</p>
       </footer>
       {% endif %}
 

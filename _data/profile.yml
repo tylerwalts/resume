@@ -1,0 +1,13 @@
+name: "Tyler Walters"
+title: "Director of Platform Architecture"
+avatar: "true"
+# looking_for_work: "yes"  # Uncomment and set to "yes" or "no" to show contact button
+summary: "Engineering leader with 20+ years designing, building and operating large-scale cloud software and data platforms. A hands-on architect and leader who has built teams from scratch, transformed organizations and implemented delivery systems for disciplined engineering results. Currently driving AI adoption and integration into a product platform for a digital health SaaS company."
+contact:
+  email: "resume@tylerwalts.com"
+  phone: "503-309-3201"
+  address1: "Portland, OR"
+social_links:
+  github_url: "https://github.com/tylerwalts"
+  linkedin_url: "https://linkedin.com/in/tylerwalts"
+  website_url: "http://tylerwalts.com"

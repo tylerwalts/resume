@@ -27,27 +27,30 @@ Site will be available at `http://localhost:4000`
 ## Architecture
 
 ### Data-Driven Content Model
-The resume content is **entirely defined in `_config.yml`**, not in `_data/` files. This is the key architectural decision that differs from typical Jekyll sites.
+The resume content is **entirely defined in `_data/` directory** as individual YAML files. This allows Jekyll to watch for changes and auto-reload without requiring server restarts.
 
-All resume sections are configured as YAML structures in `_config.yml`:
-- `resume_experiences` - Current/recent work experience
-- `resume_consulting` - Consulting experience section
-- `resume_clients` - Past client engagements
-- `resume_educations` - Education history
-- `resume_projects` - Side projects
-- `resume_skills` - Skill categories and ratings
-- `resume_certifications` - Professional certifications
-- `resume_publications` - Publications and case studies
-- `resume_recognitions` - Awards and recognition
-- `resume_interests` - Personal interests
+All resume sections are in separate data files:
+- `_data/profile.yml` - Name, title, contact info, summary, avatar flag, social links
+- `_data/experiences.yml` - Current/recent work experience (Claritas Rx)
+- `_data/employment.yml` - Prior employment (Roar Social, Amazon, Nike)
+- `_data/consulting.yml` - Consulting experience (Slalom, Hitachi, WitMatix)
+- `_data/clients.yml` - Past client engagements
+- `_data/educations.yml` - Education history
+- `_data/projects.yml` - Side projects
+- `_data/skills.yml` - Skill categories and ratings
+- `_data/certifications.yml` - Professional certifications
+- `_data/publications.yml` - Publications and case studies
+- `_data/recognitions.yml` - Awards and recognition
+- `_data/interests.yml` - Personal interests
+- `_data/sections.yml` - Section visibility flags (e.g., `experience: true`)
 
-Section visibility is controlled via boolean flags (e.g., `resume_section_experience: true`).
+The `_config.yml` file now contains only Jekyll build configuration (markdown, sass, theme settings).
 
-**Important**: Changes to `_config.yml` require restarting the Jekyll server to take effect.
+**Important**: Changes to data files in `_data/` are automatically detected by Jekyll and **do not** require restarting the server. Changes to `_config.yml` still require a restart.
 
 ### Template Structure
 - `index.html` - Entry point, references the resume layout
-- `_layouts/resume.html` - Single layout that renders all resume sections using Liquid templating
+- `_layouts/resume.html` - Single layout that renders all resume sections using Liquid templating (references `site.data.*`)
 - `_includes/` - Reusable components (head, icon-links, social icons)
 - `_sass/` - Modular Sass stylesheets compiled into `css/main.scss`
   - `_resume.scss` - Resume-specific styles
@@ -57,15 +60,16 @@ Section visibility is controlled via boolean flags (e.g., `resume_section_experi
   - `_variables.scss` - Color and sizing variables
   - `_mixins.scss` - Reusable Sass mixins
 
-### Note on `_data/` Directory
-The `_data/` directory contains template files from the original resume template but is **not actively used**. All actual resume data is in `_config.yml`.
-
 ## Making Content Changes
 
 To update resume content:
-1. Edit `_config.yml` with the desired changes
+1. Edit the appropriate YAML file in `_data/` directory
+2. Save the file - Jekyll will automatically detect the change
+3. Refresh browser to see changes (no server restart needed!)
+
+To change Jekyll configuration (theme, build settings):
+1. Edit `_config.yml`
 2. Restart Jekyll server: `Ctrl+C` then `bundle exec jekyll serve`
-3. Refresh browser to see changes
 
 ## Deployment
 
