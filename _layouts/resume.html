@@ -79,6 +79,33 @@
         {% endif %}
       </header>
 
+      {% if site.resume_section_employment %}
+      <!-- begin Prior Experience -->
+      <section class="content-section">
+        <header class="section-header">
+          <h2>Prior Experience</h2>
+        </header>
+        <div class="resume-item">
+          {% for experience in site.resume_employment %}
+          <div class="resume-item-list">
+            <section class="content-section">
+              <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+                  <h3 class="resume-item-title" itemprop="name">{{ experience.organization }} &bull; {{ experience.title }} &bull; {{experience.location}}</h3>
+                  <p class="resume-item-copy"> {{ experience.start }} &mdash; {{ experience.end }} &bull; {{ experience.description }}</p>
+                <ul class="resume-item-list">
+                  {% for bullet in experience.bullets %}
+                  <li>{{ bullet }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </section>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+      <!-- end Prior Experience -->
+      {% endif %}
+
       {% if site.resume_section_consulting %}
       <!-- begin Consulting Experience -->
       <section class="content-section">

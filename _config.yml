@@ -11,39 +11,71 @@ sass:
 # Resume settings
 resume_avatar:        "true"
 resume_name:          "Tyler Walters"
-resume_title:         "IT Consultant"
+resume_title:         "Director of Platform Architecture"
 resume_contact:
-  email: "tyler@tylerwalts.com"
+  email: "resume@tylerwalts.com"
   phone: "503-309-3201"
-  address1: "9490 SW Imperial Drive"
-  address2: "Portland, OR 97225"
+  address1: "Portland, OR"
 resume_summary: "
-    IT Consultant focused on implementing cloud-based services which are secure, scale and can be operationally automated.  Passionate about combining code, services, and devices to create memorable experiences.
+    Engineering leader with 20+ years designing, building, and operating large-scale cloud software and data platforms. A hands-on architect and people leader who has built teams from scratch, transformed organizations from legacy systems to SaaS and implemented delivery systems for disciplined engineering results. Currently driving AI adoption and integration into a product platform for a digital health SaaS company. 
 "
 
 resume_experiences:
-  - organization: "Amazon Web Services"
-    title: "Cloud Architect"
-    start: "2018"
+  - organization: "Claritas Rx"
+    title: "Director of Platform Architecture"
+    start: "2024"
     end: "Present"
     location: "Portland, OR"
-    description: "Worked with Professional Services to help customers implement solutions powered by AWS."
+    description: "Digital health SaaS company building the Ascend platform for specialty biopharmaceutical data intelligence. Progressed from Principal Architect to Director of Data Platform Engineering to Director of Platform Architecture, reporting directly to the CTO."
     bullets:
-      - "Alexa Music Skills, Developer Experience Team: Helped deliver self-service music skill creation ability to Alexa, including support for Apple Music launch.  Designed and implemented music skill metadata store and customer-specific music skill retrieval APIs."
-      - "Portland General Electric: Implemented AWS Landing Zone and IAM SSO to help bridge legacy datacenter with a multi-account cloud usage strategy."
-      - "Voice Automation Project: Worked between AWS Lex and Data Science teams building a POC voice service.  Created a custom voice-UI integration testing framework and automated ingestion of audio utterances to create test data."
-      - "DoorDash: Replaced 3rd-party cloud deployment tooling and integrated Jenkins with AWS CodeDeploy on ECS for canary deployments, faster rollbacks and multi-region support."
-      - "WholeFoods: Re-platformed online catering ordering website, 'eStore' on AWS and integrated with internal Amazon systems: wholefoodsmarket.com/shop/"
+      - "Director of Platform Architecture (2026–Present): Provide architectural oversight across all engineering teams; own the technical strategy, multi-year roadmap, and technology governance for the Ascend SaaS platform. Champion AI adoption across product development; coaching teams on AI coding tools, establishing guardrails and usage policies, and deploying autonomous SDLC agents and workflow automations. Partner with Data Science and Product on AI feature integration and govern the company-wide AI tool stack with HIPAA/SOC2 compliance."
+      - "Director of Data Platform Engineering (Nov 2024–2026): Led 16-person engineering team. Reduced hire-to-first-delivery from 2 months to 3 days via automated laptop provisioning, sandbox environments, and deployment tooling. Instituted SDLC and bi-weekly operational reviews enabling parallel roadmap delivery. Expanded Data Ingest adoption from 9 to 36 customers, totaling 90 data partners, 380 data partners and 1.1M data sets ingested. Launched first 3 SaaS customers on the new data platform for Ascend 2.0."
+      - "Principal Architect (Jan–Nov 2024): Led architecture transformation from legacy data services toward SaaS product model. Launched internal Self Service app and external Ascend 2.0 web app. Introduced CI/CD pipelines, AWS Organizations and Control Tower governance, cross-account networking, and HIPAA/SOC2 data classification tagging. Adopted AWS Glue Data Catalog and PySpark ETL for data transformation."
+
+resume_employment:
+  - organization: "Roar Social"
+    title: "Backend Software Architect"
+    start: "2022"
+    end: "2024"
+    location: "Los Angeles, CA (Remote)"
+    description: "Social network gamifying charitable giving. Led architecture design and backend implementation with a team of 25 engineers. Transformed a POC demo app to a secure, scalable, production-ready system in 9 months through the full SDLC."
+    bullets:
+      - "Load tested content delivery APIs at 100K TPS at <50ms average latency."
+      - "Built event-driven personalized feed generation, content discovery APIs, donation flow, and administration system."
+      - "Solved Lambda cold-start performance by migrating key services to a containerized NestJS service deployed to AWS Fargate."
+      - "Led operational excellence program: dashboards, runbooks, and auto-generated ticketing on metric anomalies and log errors."
+
+  - organization: "Amazon"
+    title: "Cloud Application Architect"
+    start: "2018"
+    end: "2022"
+    location: "Portland, OR"
+    description: "Held multiple engineering roles across Amazon and AWS, building and scaling large-scale distributed systems."
+    bullets:
+      - "Selling Partner Services: Managed 1.6 TB of 3rd-party seller inventory data from 14 high-volume event sources. Scaled a data routing service to 340K TPS at 50ms latency using Go and ECS Fargate auto-scaling. Led modernization of 160+ data clients across 90 teams; drove 30% reduction in high-severity tickets."
+      - "AWS Training & Certification: Defined microservices modernization roadmap for a C# monolith serving millions of students. Improved Course Search performance with OpenSearch. Scaled LMS to 50K TPS for re:Invent. Led EU cookie consent compliance across all AWS training web properties."
+      - "AWS Professional Services: Led 3–9 month cloud-native engagements for Whole Foods Market eStore, DoorDash deployment modernization, Alexa Music Skills, and Portland General Electric Landing Zone. Built voice-UI testing framework for Drive-Through Automation R&D. Certified AWS Speaker."
+
+  - organization: "Nike"
+    title: "Tech Lead, Trial Zone"
+    start: "2016"
+    end: "2018"
+    location: "Portland, OR"
+    description: "Took over an agency-created retail experience POC and built a team to secure, standardize, and scale the system to 8 flagship Nike retail locations across US, Europe, and China. The Trial Zone supports digitally enhanced AR running and basketball experiences tied to shoe product launches."
+    bullets:
+      - "Implemented CI/CD to maintain a fleet of on-site servers with Kinect sensors, video streams, and game engines, supported by cloud-based monitoring and content delivery."
+      - "Refactored Unity3D games to use configurable assets for product and venue-specific experiences."
+      - "Automated site-specific configuration to support scaling to additional locations."
 
 resume_consulting:
-  - organization: "Slalom Cross Market Delivery"
+  - organization: "Slalom Consulting"
     title: "Solution Principal"
     start: "2010"
     end: "2016"
     location: "Chicago, IL"
-    description: "Delivery leader in the cross-market (XM) delivery center for enterprise clients in Slalom's 25 locations with responsibilities of technical delivery, sales support, recruiting, career development, project oversight and practice development.  Founder of the DevOps group in XM."
+    description: "Business and technology consulting firm. Progressed from Consultant to Solution Architect to Solution Principal. Co-founded a DevOps-focused delivery practice and led client delivery of custom and cloud-native applications for enterprise clients across industries."
     bullets:
-      - "People manager supporting career development for 15 direct reports."
+      - "Managed a team of 9 SDE consultants; responsible for people management, career development, and client delivery oversight."
       - "Supported pursuit and led delivery of 7 projects driving over $8M revenue over 5 years."
       - "Project oversight for up to 22 developers, architectural design and technical escalations."
       - "Delivered Cloud and AWS Bootcamps, tech talks, conferences and hackathons."
@@ -59,17 +91,8 @@ resume_consulting:
     end: "2006"
     location: "Corvallis, OR"
     description: "Started a web development and online services company and managed a team of local resources and outsourced project teams to create custom apps and e-commerce systems."
-  #- organization: "PEAK Internet Services Provider"
-    #title: "Network Engineer & Application Development"
-    #start: "2002"
-    #end: "2004"
-    #location: "Corvallis, OR"
-    #description: "Provided hosting custom development services for an Internet Services Provider (ISP).  Created a billing and account management system based on PHP."
 
 resume_clients:
-  - name: "Nike"
-    industry: "Retail Experience"
-    description: "(2016 - 2018) Supported retail running and basketball experiences using Microsoft Kinect sensors, cameras, screens and services. Implemented CI/CD to maintain a fleet of on-site servers in US, Europe and China retail locations. Set up operational dashboards, financial reporting and refactored Unity3D-based experience to use configurable assets to align with product launches."
   - name: "Echo Global Logistics"
     industry: "Transportation Logistics"
     description: "Integrated an acquired stack of IT services using IaC approaches, Chef, .NET, Hyper-V, Azure, TerraForm and DataDog."
@@ -78,52 +101,52 @@ resume_clients:
     description: "Designed a Data CI pipeline for defining data as code using Liquibase (Datical), Chef, Vagrant and Jenkins."
   - name: "Qlik Technologies"
     industry: "BI Software"
-    description: "Lead architect and initial operations of QlikCloud.com, providing Qlik SaaS.  Automated and/or designed the operational processes and transitioned ownership to the new Qlik Cloud department.  Delivered a global and elastic system using: MEAN stack for front-end; AWS*, CloudFormation, Puppet for IaC; Consul, New Relic for operations; BlazeMeter, SauceLabs for automated testing; Atlassian suite for PM and CI/CD."
+    description: "Lead architect and initial operations of QlikCloud.com, providing Qlik SaaS. Took an enterprise hosted service and enabled it as an on-demand SaaS in less than a year. Delivered a globally distributed, HA and auto-scaling system based on concurrent user login count using: MEAN stack for front-end; AWS, CloudFormation, Puppet for IaC; Consul, New Relic for operations; BlazeMeter, SauceLabs for automated testing."
   - name: "Pepsi"
     industry: "Retail Drinks"
     description: "Supported analysis of vending machine metrics by defining Talend, RDS and Tableau servers as code using CloudFormation on AWS."
   - name: "Law Bulletin"
     industry: "Legal Services"
-    description: "Transformed legal docket management system from on-premise Oracle/Liferay/Solr/Jasper stack to AWS using MySQL on RDS, EC2, ELB, SQS, SES and S3.  Led the cloud vendor selection process and demonstrated better consistency, agility and sprint velocity using Puppet and CloudFormation for IaC, and more quality, governance and team coordination by using Atlassian Bamboo for CI/CD, and JIRA for work management."
+    description: "Migrated JuraLaw legal docket management system from on-premise Oracle/Liferay/Solr/Jasper stack to AWS. Led the cloud vendor selection process and demonstrated better consistency, agility and sprint velocity using Puppet, CloudFormation & CI/CD. Implemented IaC to ensure consistent environments and add DR ability."
   - name: "Walgreens"
     industry: "Retail Pharmacy"
-    description: "Architect of a time-sensitive data de-identification process to meet compliance deadlines and avoid disruption of reporting services."
+    description: "Implemented a time-sensitive data de-identification system to meet compliance deadlines and avoid disruption of reporting services. Ensured app data was scrubbed of identifying information before flowing between pharmacies."
   - name: "Blue Cross Blue Shield of Michigan"
     industry: "Health Insurance"
-    description: "First engineer on a new member portal for insurance members to manage accounts and claims.  Scaled team to 22 developers and enabled remote delivery by mocking production RedHat/WebSphere/Oracle environments in both AWS and local laptops using EC2, Vagrant and an IaC CI/CD approach to delivery.  Used Backbonejs, Java Spring; Liquibase for MySQL/Oracle; CloudFormation and Puppet."
+    description: "Lead engineer on a new member portal for insurance members to manage accounts and claims. Scaled team to 22 developers by automating environment setup using RedHat/WebSphere/Oracle and an IaC & CI/CD approach to delivery. Used Backbonejs, Java Spring, Liquibase for MySQL/Oracle, CloudFormation and Puppet."
   - name: "Providence Health & Services"
     industry: "Health Provider"
-    description: "Founded Healthcare Intelligence unit for applying BI principles, tooling and governance to operational and research data marts.  Defined roles, processes and delivered analysis support for bundled knee operations and stroke services using MSBI and Tableau."
+    description: "Partnered with a new Director of Healthcare Intelligence to establish a system for applying BI principles, tooling and governance to operational and research data marts. Delivered the first two pilot projects analyzing bundled knee surgery packages and stroke services using MSBI and Tableau."
   - name: "Standard Insurance"
     industry: "Insurance Provider"
-    description: "Introduced Microsoft BI stack (MSBI) and converted a set of underwriting reports migrated from Cognos.  Defined servers partially as code and documented manual customization processes.  Created center of excellence to define security, governance and training plan."
+    description: "Introduced Microsoft BI stack (MSBI) and converted a set of underwriting reports migrated from Cognos. Automated server configuration as code and documented runbook processes. Created center of excellence to define security, governance and training plan."
   - name: "Russell Investments"
     industry: "Financial Services"
     description: "Created SalesForce app to assess which accounts to invest relationship management in, and a dashboard view for users."
   - name: "CorVel Software"
     industry: "Software"
-    description: "Created a form generation and workflow application to automate the on-boarding of each of their new clients using C# .NET."
+    description: "Automated the transition from Sales to Engineering by creating a form generation and workflow service to automate the on-boarding of each new customer using C# .NET."
   - name: "Waste Management"
     industry: "Waste Management"
-    description: "Upgraded, optimized, re-designed and integrated Greenopolis.com site to ThinkGreenRewards.WM.com, and added a portal interface to provide the UI for recycling kiosks.  Automated environment cloning of the Drupal LAMP stack using Drush and bash."
+    description: "Upgraded, optimized, re-designed and integrated Greenopolis.com site to ThinkGreenRewards.WM.com, and added a portal interface to provide the UI for recycling kiosks. Automated environment cloning of the Drupal LAMP stack using Drush and bash."
   - name: "Nike"
     industry: "Sporting Goods"
     description: "Used an IaC approach to defining a Vendor Management workflow system using SharePoint site templates, custom C# web parts and scripts."
   - name: "Microsoft"
     industry: "Software"
-    description: "Prepared hands-on data visualization workshop examples and authored 2 Green IT white paper articles for VisioToolbox.com in preparation for a Green IT conference.  Mocked out HVAC sensor data generation, harvested in MySQL and bound to Visio to visualize data center temps."
+    description: "Prepared hands-on data visualization workshop examples and authored 2 Green IT white paper articles for VisioToolbox.com in preparation for a Green IT conference. Mocked out HVAC sensor data generation, harvested in MySQL and bound to Visio to visualize data center temps."
   - name: "Johnstone Supply"
     industry: "Distribution"
-    description: "Enhanced data-driven marketing decisions and automated price setting for retail locations.  Implemented MSBI stacks and configured daily intake, processing and analysis of retail store sales, costs and inventory CSVs using SSIS, SSAS and SSRS.  Developed price setting UI to support region-specific campaigns based on predictive values."
+    description: "Enhanced data-driven marketing decisions and automated price setting for retail locations. Implemented MSBI stacks and configured daily intake, processing and analysis of retail store sales, costs and inventory CSVs using SSIS, SSAS and SSRS. Developed price setting UI to support region-specific campaigns based on predictive values."
   - name: "Cascade Corporation"
     industry: "Manufacturing"
     description: "Customized reports and tooling machine code to stamp load bearing data on forklift parts to meet new regulations."
   - name: "Columbia Sportswear"
     industry: "Sporting Goods"
-    description: "Updated corporate social responsibility app that enabled inspectors to remote factory locations offline, then automatically synchronize data when they come back online.  Used C# .NET and XML-based data storage."
+    description: "Updated corporate social responsibility app that enabled inspectors to remote factory locations offline, then automatically synchronize data when they come back online. Used C# .NET and XML-based data storage."
   - name: "Knowledge Learning Corporation"
     industry: "Education"
-    description: "Created kiosk time-clock software to allow parents and teachers to check children in/out, and administration UI for compliance, performance and financial reporting using Java Struts and Oracle.  Developed set of reports to assess marketing campaign effectiveness."
+    description: "Created kiosk time-clock software to allow parents and teachers to check children in/out, and administration UI for compliance, performance and financial reporting using Java Struts and Oracle. Developed set of reports to assess marketing campaign effectiveness."
   - name: "WitMatix Clients (< 2006)"
     industry: "Software"
     description: "LAMP/Joomla sites for new and small ventures: Symmetry-SSG.com, SunRoseSheep.com, RendezvousPCs.com, RoachWear.biz, GetFlossin.com, HeadTracker.com, BerkshireTownhomes.com, MottoRX.com, ChristianQuarter.com, BuyGoodMusic.com and others."
@@ -166,12 +189,6 @@ resume_projects:
     start: "2012"
     end: "2017"
     description: "Automates accepting the TOS, downloading and custom installing Oracle Java."
-  #- name: "Decision Matrix"
-    #link: "todo"
-    #role: "Author"
-    #start: "2015"
-    #end: "Present"
-    #description: "A framework for supporting complex decisions with multiple stakeholders."
   - name: "Kegbot Puppet Module"
     link: "https://forge.puppet.com/burdara/kegbot"
     role: "Developer"
@@ -183,73 +200,87 @@ resume_projects:
 resume_skills:
   - name: "Languages"
     skill_items:
+      - name: "Python"
+        rating: 4
       - name: "JavaScript"
         rating: 4
-      - name: "Ruby"
-        rating: 4
-      - name: "Java"
-        rating: 4
-      - name: "HTML/CSS"
+      - name: "TypeScript"
         rating: 4
       - name: "Bash"
         rating: 4
-      - name: "PHP"
+      - name: "Go"
         rating: 3
-      - name: "PowerShell"
+      - name: "HTML/CSS"
         rating: 3
-      - name: "C# .NET"
+      - name: "Ruby"
         rating: 3
-  - name: "Frameworks"
+  - name: "Frameworks & Tools"
     skill_items:
-      - name: "Puppet"
-        rating: 5
-      - name: "Chef"
+      - name: "PySpark"
         rating: 4
-      - name: "MEAN"
-        rating: 3
-      - name: "SharePoint"
+      - name: "NestJS"
         rating: 4
-      - name: "Drupal"
+      - name: "AWS CDK / CloudFormation"
         rating: 4
-      - name: "Spring"
-        rating: 3
-      - name: "Joomla"
-        rating: 3
       - name: "Jekyll"
         rating: 3
-  - name: "Business Intelligence"
+  - name: "Data Platform"
     skill_items:
-      - name: "SSRS/SSIS/SSAS"
+      - name: "AWS Glue / ETL"
         rating: 4
-      - name: "Oracle, MySQL"
-        rating: 3
-      - name: "Qlik, Tableau"
-        rating: 3
-      - name: "Hadoop / Pig"
-        rating: 3
-      - name: "Spark / Zeppelin"
-        rating: 3
+      - name: "Event-Driven Pipelines"
+        rating: 4
+      - name: "OpenSearch"
+        rating: 4
       - name: "MongoDB"
+        rating: 3
+      - name: "Oracle / MySQL"
         rating: 3
       - name: "Redis"
         rating: 3
-  - name: "Cloud Development"
+  - name: "Cloud & DevOps"
     skill_items:
       - name: "CI/CD"
         rating: 5
-      - name: "Agile Delivery"
-        rating: 3
-      - name: "AWS, GCE, Azure"
+      - name: "AWS"
+        rating: 5
+      - name: "ECS / Fargate"
         rating: 4
       - name: "Terraform"
         rating: 4
-      - name: "Consul"
+      - name: "AWS Organizations / Control Tower"
         rating: 4
-      - name: "Bamboo/Jenkins"
+      - name: "Agile Delivery"
         rating: 4
       - name: "Distributed Systems"
-        rating: 2
-
+        rating: 4
+  - name: "AI Engineering"
+    skill_items:
+      - name: "AI Coding Tools"
+        rating: 4
+      - name: "Agentic Workflow Automation"
+        rating: 4
+      - name: "Autonomous SDLC Agents"
+        rating: 4
+      - name: "LLM Integration"
+        rating: 3
+      - name: "AI Guardrails & Policy"
+        rating: 3
+  - name: "Engineering Leadership"
+    skill_items:
+      - name: "Team Building"
+        rating: 5
+      - name: "SDLC Design"
+        rating: 5
+      - name: "Operational Excellence"
+        rating: 5
+      - name: "Roadmap Planning"
+        rating: 4
+      - name: "Hiring & Performance"
+        rating: 4
+#TODO:  asdf
+#(Claude Code, Cursor, Copilot)
+#Specialties: software and platform architecture, AI engineering adoption, data platforms on AWS, autonomous agent workflows, distributed systems, and SDLC transformation.
 
 
 resume_recognitions:
@@ -261,16 +292,22 @@ resume_recognitions:
     description: "For peer recognition at Hitachi Consulting."
 
 resume_certifications:
+  - title: "AWS Certified SysOps Administrator"
+    link: "https://aws.amazon.com/certification/certified-sysops-admin-associate/"
+    authority: "Amazon Web Services"
+    year: "2021"
+  - title: "AWS Certified Developer Associate"
+    link: "https://aws.amazon.com/certification/certified-developer-associate/"
+    authority: "Amazon Web Services"
+    year: "2019"
   - title: "AWS Certified Solutions Architect"
     link: "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
     authority: "Amazon Web Services"
-    year: "2014"
-  - title: "Microsoft SharePoint Architect"
-    link: "https://www.microsoft.com/en-us/learning/exam-70-573.aspx"
-    authority: "Microsoft"
-    license_number: "70-573"
-    year: "2010"
-
+    year: "2018"
+  - title: "AWS Certified Cloud Practitioner"
+    link: "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+    authority: "Amazon Web Services"
+    year: "2017"
   - title: "MCPD: SharePoint Developer 2010"
     link: "https://www.microsoft.com/en-us/learning/mcsd-sharepoint-apps-certification.aspx"
     authority: "Microsoft"
@@ -292,10 +329,6 @@ resume_publications:
       - "https://www.youtube.com/watch?v=3B49y3rjbw4"
       - "https://qlikcloud.com/"
     description: "The QlikCloud.com solution showcased by Qlik, Slalom and AWS for how the thick client software was converted to social SaaS, the rapid implementation time and its global scaling elasticity."
-  #- title: "Slalom Profile: Tyler Walters"
-    #link: "https://www.slalom.com/people-profile-tyler-walters"
-    #source: "Slalom.com"
-    #year: "2012"
   - title: "DrupalCon: Case Studies in Social Commerce"
     links:
       - "https://sf2010.drupal.org/conference/sessions/case-studies-social-commerce-waste-managements-greenopolis-mattelcom.html"
@@ -308,8 +341,7 @@ resume_publications:
       - "http://web.archive.org/web/20100602035846/http://visiotoolbox.com/downloads/gogreen/How-To-Analyze-Rack-Server-Virtualization.pdf"
       - "http://web.archive.org/web/20100414101219/http://visiotoolbox.com/Green_IT/"
     year: "2009"
-    description: "How-Tos  and code from creating a workshop and CD distribution using MS Visio for Green IT."
-   #How-To articles on how to use Microsoft Visio to visualize the physical temperature, humidity and other HVAC data metrics in a data center building, and how to use the SCOM integration to analyze rack virtualization.
+    description: "How-Tos and code from creating a workshop and CD distribution using MS Visio for Green IT."
   - title: "Weatherford Entrepreneurship Incubator"
     links:
       - "http://www.gazettetimes.com/business/the-weatherford-way-young-entrepreneurs-take-over-a-renovated-osu/article_1a52181b-f4f7-5842-a030-def45229a24e.html"
@@ -339,6 +371,7 @@ resume_interests:
 # Decide which sections to use
 # comment out to hide
 resume_section_experience:      true
+resume_section_employment:      true
 resume_section_consulting:      true
 resume_section_clients:         true
 resume_section_education:       true
@@ -353,12 +386,12 @@ resume_section_footer:          false
 # uncomment the options you wish to display, and add your own URL
 resume_social_links:
   resume_github_url:            "https://github.com/tylerwalts"
-  resume_twitter_url:           "https://twitter.com/tylerwalts"
+  #resume_twitter_url:           "https://twitter.com/tylerwalts"
   #resume_dribble_url:            "insert Dribble URL here"
   #resume_facebook_url:          "insert Facebook URL here"
   resume_linkedin_url:          "https://linkedin.com/in/tylerwalts"
   #resume_instagram_url:         "insert your Instagram URL here"
-  #resume_website_url:           "http://tylerwalts.com"
+  resume_website_url:           "http://tylerwalts.com"
 
 # Design settings
 resume_theme:                   default
