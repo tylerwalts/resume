@@ -5,7 +5,7 @@
   location: "Chicago, IL"
   description: "Business and technology consulting firm. Progressed from Consultant to Solution Architect to Solution Principal. Co-founded a DevOps-focused delivery practice and led client delivery of custom and cloud-native applications for enterprise clients across industries."
   bullets:
-    - "Managed a team of 9 SDE consultants; responsible for people management, career development, and client delivery oversight."
+    - "Managed a team of 9 SDE consultants; responsible for people management, career development and client delivery oversight."
     - "Supported pursuit and led delivery of 7 projects driving over $8M revenue over 5 years."
     - "Project oversight for up to 22 developers, architectural design and technical escalations."
     - "Delivered Cloud and AWS Bootcamps, tech talks, conferences and hackathons."
@@ -16,7 +16,7 @@
   location: "Portland, OR"
   description: "Project-based app dev consultant for the Education, Retail, Manufacturing, Distribution, Finance, Healthcare, IT and Waste Management industries."
 - organization: "WitMatix Web Development Services"
-  title: "Owner, Consultant"
+  title: "Founder"
   start: "2004"
   end: "2006"
   location: "Corvallis, OR"
