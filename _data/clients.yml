@@ -51,7 +51,7 @@
   description: "Updated corporate social responsibility app that enabled inspectors to remote factory locations offline, then automatically synchronize data when they come back online. Used C# .NET and XML-based data storage."
 - name: "Knowledge Learning Corporation"
   industry: "Education"
-  description: "Created kiosk time-clock software to allow parents and teachers to check children in/out, and administration UI for compliance, performance and financial reporting using Java Struts and Oracle. Developed set of reports to assess marketing campaign effectiveness."
+  description: "Created kiosk time-clock software to allow parents and teachers to check children in/out, an administration UI for compliance, performance and financial reporting using Java Struts and Oracle. Created marketing campaign effectiveness reports."
 - name: "WitMatix Clients (< 2006)"
   industry: "Software"
   description: "LAMP/Joomla sites for new and small ventures: Symmetry-SSG.com, SunRoseSheep.com, RendezvousPCs.com, RoachWear.biz, GetFlossin.com, HeadTracker.com, BerkshireTownhomes.com, MottoRX.com, ChristianQuarter.com, BuyGoodMusic.com and others."
