@@ -1,70 +1,17 @@
-- name: "Languages"
-  skill_items:
-    - name: "Python"
-      rating: 4
-    - name: "JavaScript"
-      rating: 4
-    - name: "TypeScript"
-      rating: 4
-    - name: "Bash"
-      rating: 4
-    - name: "Go"
-      rating: 3
-    - name: "HTML/CSS"
-      rating: 3
-    - name: "Ruby"
-      rating: 3
-- name: "Frameworks & Tools"
-  skill_items:
-    - name: "PySpark"
-      rating: 4
-    - name: "NestJS"
-      rating: 4
-    - name: "AWS CDK / CloudFormation"
-      rating: 4
-    - name: "Jekyll"
-      rating: 3
-- name: "Data Platform"
-  skill_items:
-    - name: "AWS Glue / ETL"
-      rating: 4
-    - name: "Event-Driven Pipelines"
-      rating: 4
-    - name: "OpenSearch"
-      rating: 4
-    - name: "MongoDB"
-      rating: 3
-    - name: "Oracle / MySQL"
-      rating: 3
-    - name: "Redis"
-      rating: 3
-- name: "Cloud & DevOps"
-  skill_items:
-    - name: "CI/CD"
-      rating: 5
-    - name: "AWS"
-      rating: 5
-    - name: "ECS / Fargate"
-      rating: 4
-    - name: "Terraform"
-      rating: 4
-    - name: "AWS Organizations / Control Tower"
-      rating: 4
-    - name: "Agile Delivery"
-      rating: 4
-    - name: "Distributed Systems"
-      rating: 4
+
 - name: "AI Engineering"
   skill_items:
     - name: "AI Coding Tools"
       rating: 4
-    - name: "Agentic Workflow Automation"
+    - name: "Agentic Workflow"
       rating: 4
-    - name: "Autonomous SDLC Agents"
+    - name: "Autonomous SDLC"
       rating: 4
     - name: "LLM Integration"
       rating: 3
     - name: "AI Guardrails & Policy"
+      rating: 3
+    - name: "Compliance Auditing"
       rating: 3
 - name: "Engineering Leadership"
   skill_items:
@@ -77,4 +24,56 @@
     - name: "Roadmap Planning"
       rating: 4
     - name: "Hiring & Performance"
+      rating: 4
+- name: "Cloud & DevOps"
+  skill_items:
+    - name: "CI/CD Pipelines"
+      rating: 5
+    - name: "ECS / Fargate"
+      rating: 4
+    - name: "AWS CDK / Terraform"
+      rating: 4
+    - name: "AWS Organizations"
+      rating: 4
+    - name: "Control Tower"
+      rating: 4
+    - name: "Agile Delivery"
+      rating: 4
+
+- name: "Frameworks"
+  skill_items:
+    - name: "AWS Glue / ETL"
+      rating: 4
+    - name: "PySpark"
+      rating: 4
+    - name: "NestJS"
+      rating: 4
+    - name: "Event-Driven Architecture"
+      rating: 4
+    - name: "Distributed Systems"
+      rating: 4
+- name: "Data Platform"
+  skill_items:
+    - name: "DynamoDB"
+      rating: 4
+    - name: "Elastic/OpenSearch"
+      rating: 4
+    - name: "Document DBs"
+      rating: 3
+    - name: "Relational DBs"
+      rating: 3
+    - name: "Redis / Memcached"
+      rating: 3
+
+- name: "Languages"
+  skill_items:
+    - name: "Python"
+      rating: 4
+    - name: "TypeScript"
+      rating: 4
+    - name: "Go"
+      rating: 3
+    - name: "HTML/CSS"
+      rating: 3
+    - name: "Java/Kotlin"
       rating: 4
