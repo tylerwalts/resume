@@ -100,6 +100,19 @@
         font-size: 0.75rem;
         padding-left: 0.6rem;
       }
+      .executive-highlights {
+        padding-left: 0.6rem;
+        padding-top: 0.3rem;
+        .highlights-list {
+          @include sans;
+          font-size: 0.65rem;
+          margin: 0;
+          padding-left: 1rem;
+          li {
+            margin-bottom: 0.1rem;
+          }
+        }
+      }
       .resume-item {
         padding-left: 0.6rem;
       }
@@ -223,6 +236,13 @@
     }
   }
 
+  .resume-item-subsection {
+    @include sans_bold;
+    font-size: 0.65rem;
+    margin: 0.3rem 0 0.1rem;
+    letter-spacing: -.02rem;
+  }
+
   .resume-item-list {
     font-size: 0.6rem;
     margin-top: 0.1rem;
@@ -232,7 +252,8 @@
   .resume-item-title,
   .resume-item-details,
   .resume-item-copy,
-  .resume-item-list {
+  .resume-item-list,
+  .resume-item-subsection {
     @include sans;
     text-align: justify;
     text-justify: inter-word;

@@ -3,31 +3,39 @@
   start: "2022"
   end: "2024"
   location: "Los Angeles, CA (Remote)"
-  description: "Social network gamifying charitable giving. Led architecture design and backend implementation with a team of 25 engineers. Transformed a POC demo app to a secure, scalable, production-ready system in 9 months through the full SDLC."
+  description: "Transformed a POC demo app into a secure, scalable, production-ready social platform in 9 months, leading architecture design and backend implementation with a team of 25 engineers."
   bullets:
-    - "Load tested content delivery APIs at 100K TPS at <50ms average latency."
-    - "Built event-driven personalized feed generation, content discovery APIs, donation flow and administration system."
-    - "Solved Lambda cold-start performance by migrating key services to a containerized NestJS service deployed to AWS Fargate."
-    - "Led operational excellence program: dashboards, runbooks and auto-generated ticketing on metric anomalies and log errors."
+    - "Scaled content delivery APIs to 100K TPS at <50ms average latency."
+    - "Established operational excellence program — dashboards, runbooks and auto-generated ticketing on metric anomalies and log errors."
+    - "Built event-driven personalized feed generation, content discovery and donation flow systems."
 
 - organization: "Amazon"
   title: "Cloud Application Architect"
   start: "2018"
   end: "2022"
   location: "Portland, OR"
-  description: "Held multiple engineering roles across Amazon and AWS, building and scaling large-scale distributed systems."
-  bullets:
-    - "Selling Partner Services: Managed 1.6 TB of 3rd-party seller inventory data from 14 high-volume event sources. Scaled a data routing service to 340K TPS at 50ms latency using Go and ECS Fargate auto-scaling. Led modernization of 160+ data clients across 90 teams; drove 30% reduction in high-severity tickets."
-    - "AWS Training & Certification: Defined microservices modernization roadmap for a C# monolith serving millions of students. Improved Course Search performance with OpenSearch. Scaled LMS to 50K TPS for re:Invent. Led EU cookie consent compliance across all AWS training web properties."
-    - "AWS Professional Services: Led 3–9 month cloud-native engagements for Whole Foods Market eStore, DoorDash deployment modernization, Alexa Music Skills and Portland General Electric Landing Zone. Built voice-UI testing framework for Drive-Through Automation R&D. Certified AWS Speaker."
+  description: "Held multiple engineering roles across Amazon and AWS, architecting hyperscale distributed systems and leading enterprise modernization engagements."
+  subsections:
+    - title: "Hyperscale Distributed Systems"
+      bullets:
+        - "Scaled data routing service to 340K TPS at 50ms latency managing 1.6 TB of seller inventory data from 14 high-volume event sources."
+        - "Led modernization of 160+ data clients across 90 teams, driving 30% reduction in high-severity tickets."
+    - title: "Enterprise Modernization"
+      bullets:
+        - "Defined microservices modernization roadmap for a C# monolith serving millions of AWS Training students."
+        - "Scaled LMS to 50K TPS for re:Invent; led EU cookie consent compliance across all AWS training web properties."
+        - "Led cloud-native engagements for Whole Foods Market, DoorDash and Portland General Electric."
+    - title: "Executive Technical Leadership"
+      bullets:
+        - "Certified AWS Speaker; delivered technical guidance and architecture direction to Fortune 500 executive stakeholders."
+        - "Built voice-UI testing framework for Drive-Through Automation R&D with Alexa Music Skills."
 
 - organization: "Nike"
   title: "Tech Lead, Trial Zone"
   start: "2016"
   end: "2018"
   location: "Portland, OR"
-  description: "Took over an agency-created retail experience POC and built a team to secure, standardize and scale the system to 8 flagship Nike retail locations across US, Europe and China. The Trial Zone supports digitally enhanced AR running and basketball experiences tied to shoe product launches."
+  description: "Scaled an agency-created retail experience POC to 8 flagship Nike locations across US, Europe and China, supporting digitally enhanced AR running and basketball experiences."
   bullets:
-    - "Implemented CI/CD to maintain a fleet of on-site servers with Kinect sensors, video streams and game engines, supported by cloud-based monitoring and content delivery."
-    - "Refactored Unity3D games to use configurable assets for product and venue-specific experiences."
-    - "Automated site-specific configuration to support scaling to additional locations."
+    - "Built CI/CD for on-site server fleet with Kinect sensors, video streams and game engines supported by cloud monitoring."
+    - "Scaled system from single POC to 8 global flagship locations through automated site-specific configuration."

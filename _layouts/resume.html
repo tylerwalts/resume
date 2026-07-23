@@ -51,6 +51,16 @@
               <p>{{ site.data.profile.summary }}</p>
             </div>
 
+            {% if site.data.profile.highlights %}
+            <div class="executive-highlights">
+              <ul class="highlights-list">
+                {% for highlight in site.data.profile.highlights %}
+                <li>{{ highlight }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endif %}
+
             {% if site.data.sections.experience %}
             <!-- begin Experience -->
             <section class="content-section">
@@ -58,11 +68,22 @@
               <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                   <h3 class="resume-item-title" itemprop="name">{{ experience.organization }} &bull; {{ experience.title }} &bull; {{experience.location}}</h3>
                   <p class="resume-item-copy"> {{ experience.start }} &rarr; {{ experience.end }} &bull; {{ experience.description }}</p>
-                <ul class="resume-item-list">
-                  {% for bullet in experience.bullets %}
-                  <li>{{ bullet }}</li>
+                {% if experience.subsections %}
+                  {% for subsection in experience.subsections %}
+                  <h4 class="resume-item-subsection">{{ subsection.title }}</h4>
+                  <ul class="resume-item-list">
+                    {% for bullet in subsection.bullets %}
+                    <li>{{ bullet }}</li>
+                    {% endfor %}
+                  </ul>
                   {% endfor %}
-                </ul>
+                {% else %}
+                  <ul class="resume-item-list">
+                    {% for bullet in experience.bullets %}
+                    <li>{{ bullet }}</li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
               </div><!-- end of resume-item -->
               {% endfor %}
             </section>
@@ -92,11 +113,22 @@
               <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
                   <h3 class="resume-item-title" itemprop="name">{{ experience.organization }} &bull; {{ experience.title }} &bull; {{experience.location}}</h3>
                   <p class="resume-item-copy"> {{ experience.start }} &rarr; {{ experience.end }} &bull; {{ experience.description }}</p>
-                <ul class="resume-item-list">
-                  {% for bullet in experience.bullets %}
-                  <li>{{ bullet }}</li>
+                {% if experience.subsections %}
+                  {% for subsection in experience.subsections %}
+                  <h4 class="resume-item-subsection">{{ subsection.title }}</h4>
+                  <ul class="resume-item-list">
+                    {% for bullet in subsection.bullets %}
+                    <li>{{ bullet }}</li>
+                    {% endfor %}
+                  </ul>
                   {% endfor %}
-                </ul>
+                {% else %}
+                  <ul class="resume-item-list">
+                    {% for bullet in experience.bullets %}
+                    <li>{{ bullet }}</li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
               </div>
             </section>
           </div>
