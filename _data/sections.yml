@@ -3,7 +3,7 @@ employment: true
 consulting: true
 clients: true
 education: true
-projects: true
+projects: false
 skills: true
 recognition: false
 certifications: true

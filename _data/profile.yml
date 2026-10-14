@@ -1,11 +1,19 @@
 name: "Tyler Walters"
-title: "Director of Platform Architecture"
+title: "Platform Engineering | AI Transformation | Enterprise Architecture"
 avatar: "true"
 # looking_for_work: "yes"  # Uncomment and set to "yes" or "no" to show contact button
-summary: "Engineering leader with 20+ years designing, building and operating large-scale cloud software and data platforms. A hands-on architect and leader who has built teams from scratch, transformed organizations and implemented delivery systems for disciplined engineering results. Currently driving AI adoption and integration into a product platform for a digital health SaaS company."
+summary: "Technology leader with 20+ years leading engineering transformations spanning cloud modernization, platform engineering, and enterprise AI adoption. Builds organizations, platforms, and engineering systems that enable companies to scale effeciently and responsibly."
+highlights:
+  - "20+ years leading engineering organizations and enterprise architecture"
+  - "Ex-Amazon SDE & architect building and operating  hyperscale distributed systems"
+  - "Built and scaled performant engineering teams from startup through enterprise"
+  - "Led cloud and AI transformations across healthcare, retail, SaaS and Fortune 500 clients"
+  - "Created agent deployment, observability, security, guardrail and HITL approval system"
+  - "Introduced autonomous AI software delivery in a controlled HIPAA/SOC2 environment"
+  - "Actively hands on with critical development and operational activities."
 contact:
   email: "resume@tylerwalts.com"
-  phone: "503-309-3201"
+  phone: "503-741-9183"
   address1: "Portland, OR"
 social_links:
   github_url: "https://github.com/tylerwalts"

@@ -31,6 +31,15 @@
   padding-right: 0;
   padding-bottom: 0;
 
+  .header-title {
+    @include sans_regular;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.2rem;
+    letter-spacing: -.02rem;
+    margin: 0.8rem 0 0;
+  }
+
   .avatar {
     width: 95px;
     max-width: 100%;
@@ -38,6 +47,8 @@
     @include border-radius(100px);
     margin: 0 auto;
     display: inline-block;
+    position: relative;
+    z-index: 1;
   }
 
   .name-and-title{
@@ -53,15 +64,6 @@
       line-height: 1;
       margin: 0;
     }
-
-    .header-title {
-      @include sans_regular;
-      font-size: 1.75rem;
-      text-align: center;
-      line-height: 2rem;
-      letter-spacing: -.05rem;
-      margin: 0;
-    }
   }
 
   .contact-info {
@@ -70,7 +72,7 @@
     vertical-align: top;
     display: inline-block;
     text-align: right;
-    margin: 1rem 0 2rem;
+    margin: 1rem 0 0.5rem;
   }
 
     // social links and education
@@ -99,6 +101,19 @@
         text-justify: inter-word;
         font-size: 0.75rem;
         padding-left: 0.6rem;
+      }
+      .executive-highlights {
+        padding-left: 0.6rem;
+        padding-top: 0.3rem;
+        .highlights-list {
+          @include sans;
+          font-size: 0.65rem;
+          margin: 0;
+          padding-left: 1rem;
+          li {
+            margin-bottom: 0.1rem;
+          }
+        }
       }
       .resume-item {
         padding-left: 0.6rem;
@@ -200,6 +215,11 @@
       @include sans;
       font-size: 0.7rem;
     }
+
+    &.client-additional {
+      margin-top: 0.6rem;
+      font-style: italic;
+    }
   }
 
 
@@ -223,6 +243,13 @@
     }
   }
 
+  .resume-item-subsection {
+    @include sans_bold;
+    font-size: 0.65rem;
+    margin: 0.3rem 0 0.1rem;
+    letter-spacing: -.02rem;
+  }
+
   .resume-item-list {
     font-size: 0.6rem;
     margin-top: 0.1rem;
@@ -232,7 +259,8 @@
   .resume-item-title,
   .resume-item-details,
   .resume-item-copy,
-  .resume-item-list {
+  .resume-item-list,
+  .resume-item-subsection {
     @include sans;
     text-align: justify;
     text-justify: inter-word;
@@ -297,28 +325,19 @@
   }
 }
 
-// Clear bottom area below shaded bar
-.clear-bar {
+// Full-width publications below shaded bar
+.publications-full-width {
   margin-bottom: 1.5rem;
-}
-.clear-bottom-left-side {
-  vertical-align: top;
-  display: inline-block;
-  .resume-item {
-    margin-bottom: 0.2rem;
-  }
   .publication-title {
     margin-bottom: .15rem;
   }
-}
-.clear-bottom-right-side {
-  vertical-align: top;
-  display: inline-block;
-  h2 {
-    padding-left: 0.6rem;
-  }
-  .resume-item {
-    padding-left: 0.6rem;
+  .publications-grid {
+    column-count: 2;
+    column-gap: 1.5rem;
+    .resume-item {
+      break-inside: avoid;
+      margin-bottom: 0.4rem;
+    }
   }
 }
 
