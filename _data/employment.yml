@@ -2,7 +2,7 @@
   title: "Backend Software Architect"
   start: "2022"
   end: "2024"
-  location: "Los Angeles, CA (Remote)"
+  location: "Los Angeles, CA (Remote Portland)"
   description: "Transformed a POC demo app into a secure, scalable, production-ready social platform in 9 months, leading architecture design and backend implementation with a team of 25 engineers."
   bullets:
     - "Scaled content delivery APIs to 100K TPS at <50ms average latency."
