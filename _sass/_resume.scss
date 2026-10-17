@@ -26,6 +26,7 @@
 // page header styles
 
 .page-header {
+  position: relative;
   padding-top: 1.5rem;
   padding-left: 0;
   padding-right: 0;
@@ -33,11 +34,15 @@
 
   .header-title {
     @include sans_regular;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     text-align: center;
     line-height: 1.2rem;
     letter-spacing: -.02rem;
-    margin: 0.8rem 0 0;
+    margin: 1.3rem 0 0;
+    white-space: nowrap;
+    @include media_mobile {
+      white-space: normal;
+    }
   }
 
   .avatar {
@@ -53,6 +58,9 @@
 
   .name-and-title{
     width: 480px;
+    @include media_larger_than_mobile {
+      width: calc(100% - 100px);
+    }
     display: inline-block;
     vertical-align: top;
 
@@ -63,16 +71,29 @@
       letter-spacing: -.15rem;
       line-height: 1;
       margin: 0;
+      // Nudge left to balance the gap between avatar and contact info
+      @include media_larger_than_mobile {
+        padding-right: 110px;
+      }
     }
   }
 
   .contact-info {
     width: 95px;
-    font-size: 0.50rem;
+    font-size: 0.6rem;
+    line-height: 1.6;
     vertical-align: top;
     display: inline-block;
     text-align: right;
     margin: 1rem 0 0.5rem;
+    // Pinned top-right so the title can span the full header width
+    @include media_larger_than_mobile {
+      position: absolute;
+      top: 1.5rem;
+      right: 0;
+      width: auto;
+      margin: 0.6rem 0 0;
+    }
   }
 
     // social links and education
@@ -107,11 +128,21 @@
         padding-top: 0.3rem;
         .highlights-list {
           @include sans;
-          font-size: 0.65rem;
+          font-size: 0.75rem;
           margin: 0;
-          padding-left: 1rem;
+          padding-left: 0;
+          list-style: none;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0.9rem 1.2rem;
+          @include media_mobile {
+            grid-template-columns: 1fr;
+          }
           li {
-            margin-bottom: 0.1rem;
+            margin: 0;
+            padding-left: 0.6rem;
+            border-left: 3px solid currentColor;
+            line-height: 1.35;
           }
         }
       }
@@ -203,13 +234,13 @@
   .client-item {
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
-    letter-spacing: -.05rem;
     text-align: justify;
     text-justify: inter-word;
 
     .client-name {
       @include sans_extrabold;
       font-size: 0.8rem;
+      letter-spacing: -.05rem;
     }
     .client-description {
       @include sans;

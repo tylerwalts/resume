@@ -36,5 +36,18 @@
       rating: 3
     - name: "Java/Kotlin"
       rating: 4
-    - name: "HTML/CSS"
-      rating: 3
+
+- name: "Platform & AI"
+  skill_items:
+    - name: "AWS CDK"
+      rating: 4
+    - name: "Spark/Iceberg"
+      rating: 4
+    - name: "Airflow"
+      rating: 4
+    - name: "Bedrock/Strands"
+      rating: 4
+    - name: "MCP"
+      rating: 4
+    - name: "Claude Agent SDK"
+      rating: 4

@@ -14,7 +14,7 @@
         <div class="contact-info">
             {{ site.data.profile.contact.phone }} <br />
             {{ site.data.profile.contact.address1 }} <br />
-            {{ site.data.profile.contact.address2 }} <br />
+            {% if site.data.profile.contact.address2 %}{{ site.data.profile.contact.address2 }} <br />{% endif %}
             {{ site.data.profile.contact.email }}
         </div>
         <div class="shaded-bar">
@@ -79,7 +79,7 @@
         </header>
         {% for experience in site.data.experiences %}
         <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-            <h3 class="resume-item-title" itemprop="name">{{ experience.organization }} &bull; {{ experience.title }} &bull; {{experience.location}}</h3>
+            <h3 class="resume-item-title" itemprop="name">{{ experience.organization }} &bull; {% if experience.link %}<a href="{{ experience.link }}" target="_blank">{{ experience.title }}</a>{% else %}{{ experience.title }}{% endif %} &bull; {{experience.location}}</h3>
             <p class="resume-item-copy"> {{ experience.start }} &rarr; {{ experience.end }} &bull; {{ experience.description }}</p>
           {% if experience.subsections %}
             {% for subsection in experience.subsections %}
@@ -114,7 +114,7 @@
           <div class="resume-item-list">
             <section class="content-section">
               <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-                  <h3 class="resume-item-title" itemprop="name">{{ experience.organization }} &bull; {{ experience.title }} &bull; {{experience.location}}</h3>
+                  <h3 class="resume-item-title" itemprop="name">{{ experience.organization }} &bull; {% if experience.link %}<a href="{{ experience.link }}" target="_blank">{{ experience.title }}</a>{% else %}{{ experience.title }}{% endif %} &bull; {{experience.location}}</h3>
                   <p class="resume-item-copy"> {{ experience.start }} &rarr; {{ experience.end }} &bull; {{ experience.description }}</p>
                 {% if experience.subsections %}
                   {% for subsection in experience.subsections %}
@@ -219,8 +219,10 @@
                 {{ certification.title }}
               </h3>
               <p class="resume-item-copy">
+                {% if certification.year %}
                 {{ certification.year }}
                 &bull;
+                {% endif %}
                 <a target="_blank" href="{{ certification.link }}">
                   {{ certification.authority }}
                   {{ certification.license_number }}
