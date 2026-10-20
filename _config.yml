@@ -28,3 +28,16 @@ resume_theme: default
 # - _data/sections.yml (section visibility)
 #
 # This allows editing content without restarting the Jekyll server!
+
+# Working notes and per-job research (docs/<company>/<role>.md on job/* branches)
+# are never published. Listing exclude replaces Jekyll's defaults, so they're repeated.
+exclude:
+  - docs
+  - tmp
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
