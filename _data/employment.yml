@@ -38,6 +38,6 @@
   location: "Portland, OR"
   description: "Scaled an agency-created retail experience POC to 8 flagship Nike locations across US, Europe and China, supporting digitally enhanced AR running and basketball experiences."
   bullets:
-    - "Built CI/CD for on-site server fleets with Kinect sensors, video streams and game engines supported by cloud monitoring."
-    - "Built media content delivery system and coordinated new content pack releases timed to each new shoe drop."
-    - "Automated site-specific venue and product configuration, letting the system roll out to new locations without rework."
+    - "Built CI/CD and cloud monitoring for an on-site edge fleet of servers, Kinect sensors, video streams and game engines."
+    - "Built media content delivery system distributing new content packs to every site, timed to each new shoe drop."
+    - "Automated per-site device and product configuration, letting the system roll out to new locations without rework."

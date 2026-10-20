@@ -1,13 +1,13 @@
 name: "Tyler Walters"
-title: "Platform Engineering | AI Transformation | Enterprise Architecture"
+title: "Engineering Leadership | Cloud SaaS Platforms | AI Transformation"
 avatar: "true"
 # looking_for_work: "yes"  # Uncomment and set to "yes" or "no" to show contact button
-summary: "Technology leader with 20+ years leading engineering transformations spanning cloud modernization, platform engineering, and enterprise AI adoption. Builds organizations, platforms, and engineering systems that enable companies to scale efficiently and responsibly."
+summary: "Technology leader with 20+ years leading engineering transformations spanning cloud SaaS platforms, edge and data systems, and enterprise AI adoption. Builds distributed organizations, platforms, and release processes that deliver on commitments and scale efficiently."
 highlights:
   - "Ex-Amazon SDE & architect building and operating hyperscale distributed systems"
-  - "Built and scaled performant engineering teams from startup through enterprise"
+  - "Built and led distributed engineering teams from startup through enterprise"
   - "Led cloud and AI transformations across healthcare, retail, SaaS and Fortune 500 clients"
-  - "Introduced autonomous AI software delivery in a controlled HIPAA/SOC2 environment"
+  - "Turned bespoke data services into a SaaS platform under HIPAA/SOC2 controls"
 contact:
   email: "jobs@tylerwalts.com"
   phone: "503-741-9183"

@@ -17,13 +17,13 @@
   skill_items:
     - name: "Distributed Systems"
       rating: 5
-    - name: "Cloud Platforms"
+    - name: "Cloud SaaS Platforms"
       rating: 5
     - name: "Data Platforms"
       rating: 4
     - name: "Developer Experience"
       rating: 5
-    - name: "Enterprise Architecture"
+    - name: "Release Engineering"
       rating: 5
 
 - name: "Languages"

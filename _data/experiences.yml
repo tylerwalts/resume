@@ -8,14 +8,14 @@
     - title: "Technology Strategy"
       bullets:
         - "Defined Ascend Data & SaaS platform technical roadmap with CTO, aligning engineering investment to business growth."
-        - "Transformed legacy data services to a SaaS product model, unlocking Ascend 2.0 as a commercially scalable platform."
-        - "Created SDLC using a trunk-based multi-language monorepo with app and infrastructure CI/CD pipelines; top contributor across ~7k commits from 100+ engineers."
+        - "Transformed bespoke, per-customer data services into a SaaS product, unlocking Ascend 2.0 as a commercially scalable platform."
+        - "Created SDLC and release engineering on a trunk-based monorepo with app and infrastructure CI/CD pipelines; top contributor across ~7k commits from 100+ engineers."
     - title: "Platform Engineering"
       bullets:
         - "Built Ascend 2.0 foundations from the start: AWS Organizations landing zone, Control Tower and Transit Gateway cross-account networking."
         - "Scaled new Data Ingestion Platform to 45 biopharma customers, 425 data partners and ~2k data sets processing ~20GB incoming data/day."
         - "Designed HIPAA/SOC2 Iceberg lakehouse on Glue/PySpark, Airflow and Lake Formation with shared libraries, de-identification and CI/CD."
-        - "Built Self-Service, the internal operations product for Ascend 2.0 — React UI over ~20 microservice APIs for ingestion, lineage, pipeline status and audited data access with SSO."
+        - "Built Self-Service, the operations console for Ascend 2.0 support and customer success teams — React UI over ~20 microservice APIs for ingestion, lineage, pipeline status and audited data access with SSO."
         - "Built internal developer automations reducing engineer onboarding from 4w to 1d with automated provisioning, sandboxes and tooling."
     - title: "AI Transformation"
       bullets:
@@ -23,5 +23,5 @@
         - "Built production AI agents for pipeline triage, hypercare monitoring and data ingestion, with human-in-the-loop approvals, caller-scoped MCP tool access and PHI scanning."
     - title: "Organizational Leadership"
       bullets:
-        - "Helped scale engineering from 8 to 45 full time employees plus onshore/offshore vendor teams through structured hiring, onboarding automation and career coaching."
-        - "Led 16-person team as Director of Data Platform Engineering, owning product roadmap and operations."
+        - "Helped scale a distributed engineering org from 8 to 45 full time employees plus onshore/offshore vendor teams through structured hiring, onboarding automation and career coaching."
+        - "Led 16-person team as Director of Data Platform Engineering, partnering with Product to own roadmap commitments and operations."
