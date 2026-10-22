@@ -1,6 +1,6 @@
 ---
 name: job-research
-description: Research a job posting and its company (coworkers, hiring manager, new vs backfill, team, tech stack, cloud), save it to docs/<company>/<role>.md on a dedicated job/* branch, tailor the resume variant there, print it to PDF for submission, and flag edits that recur across job branches for escalation to gh-pages. Use when given a job posting URL or asked to research or tailor for a specific role.
+description: Research a job posting and its company (coworkers, hiring manager, new vs backfill, team, tech stack, cloud), save it to docs/<company>/<role>.md on a dedicated job/* branch, tailor the resume variant there, print it to PDF, draft a cover letter, and flag edits that recur across job branches for escalation to gh-pages. Use when given a job posting URL or asked to research or tailor for a specific role.
 ---
 
 # Job research and resume variant
@@ -76,7 +76,7 @@ Sources go last, as markdown links. Include ATS job IDs for the related postings
 
 ## 6. Tailor the resume (light touch)
 
-- Edit only `_data/*.yml`. Template and style changes don't belong on a job branch; see step 9.
+- Edit only `_data/*.yml`. Template and style changes don't belong on a job branch; see step 10.
 - Typical levers: the `profile.yml` title, summary and highlights; bullet wording and order to surface relevant work; skill category names.
 - Keep bullet length within the existing line budget (~125 characters at desktop width), so a bullet doesn't wrap to a new line.
 - Don't invent facts. Any reworded claim the user hasn't confirmed goes in a "Claims to verify" list in the research doc and in your reply.
@@ -96,11 +96,38 @@ The script builds the branch, serves it locally and prints it with headless Chro
 - Read the page count it reports. The resume is normally 3 pages; a jump means something wrapped badly.
 - Rasterize the pages and look at them. PDFKit via `swift` works without extra installs; ImageMagick needs Ghostscript, which isn't installed. Check for orphaned section headings, a page break inside the header block, and missing fonts. Missing fonts look like system serif text and mean `--virtual-time-budget` was too short.
 
-## 8. Commit
+## 8. Draft the cover letter
 
-Commit the `_data/` edits, the research doc and the PDF in `docs/<company>/` together on the job branch. Never commit other untracked files under `docs/` or `tmp/`. Don't push or open a PR for a job branch unless asked. Job branches never target `gh-pages`.
+**Ask first.** Before drafting, use AskUserQuestion to ask what personal reason to add to the motivation for working there. Offer 2–4 options drawn from the research, for example:
 
-## 9. Trend check and escalation
+- local to the office or the region;
+- alma mater or other personal ties to the company's origin;
+- the company's mission or product;
+- the industry or the stage of company.
+
+Allow multiple selections; "Other" lets the user type their own reason. Use only the reasons they pick, in their words. Don't add motivations they didn't give you.
+
+Write `docs/<company-slug>/cover-letter.md`, about 400–450 words, in this shape:
+
+1. **Header:** name, city, phone and email from `_data/profile.yml`.
+2. **Greeting:** the hiring manager by name only if it's confirmed; otherwise "Dear <Company> Hiring Team".
+3. **Opening (2–3 sentences):** the exact role title and the one-line reason the user's background fits the product.
+4. **3–4 evidence paragraphs:** each opens with a short bold lead-in naming a requirement from the posting, then backs it with specific results from this branch's resume bullets, and ends by tying them to the company's product or team.
+5. **Motivation paragraph:** the reasons the user chose. Company facts used here, such as origin or office locations, must come from the research doc or be flagged for the user to verify.
+6. **Close (1 sentence) and sign-off.**
+
+Rules:
+
+- Every claim must already be on the resume or confirmed by the user. Don't stretch titles, team sizes or scope.
+- Keep required qualifications the resume doesn't clearly show (e.g. managing managers) out of the letter. List them in your reply so the user can add a sentence if true.
+- If the posting asks for a story ("describe what slipped"), save it for the interview and say so in your reply.
+- In your reply, include a table mapping posting requirements to the evidence used, plus anything to verify before sending.
+
+## 9. Commit
+
+Commit the `_data/` edits, the research doc, the PDF and the cover letter in `docs/<company>/` together on the job branch. Never commit other untracked files under `docs/` or `tmp/`. Don't push or open a PR for a job branch unless asked. Job branches never target `gh-pages`.
+
+## 10. Trend check and escalation
 
 After tailoring, compare this branch with the other job branches:
 

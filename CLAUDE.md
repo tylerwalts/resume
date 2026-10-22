@@ -79,7 +79,7 @@ Custom domain configured via `CNAME` file pointing to `resume.tylerwalts.com`.
 
 ## Job-Specific Branches
 
-Each job application gets its own `job/<company>-<role>` branch, holding a tailored resume (`_data/` edits only) and research at `docs/<company>/<role>.md`. Job branches are **not merged** into `gh-pages`. Changes that recur across job branches (fixes, confirmed facts, generic rewrites) are promoted through a dedicated `update/<topic>` branch and PR to `gh-pages` on the fork (`tylerwalts/resume`). The `job-research` skill (`.claude/skills/job-research/`) runs the whole workflow. `docs/` and `tmp/` are excluded from the Jekyll build.
+Each job application gets its own `job/<company>-<role>` branch, holding a tailored resume (`_data/` edits only), research at `docs/<company>/<role>.md`, and a cover letter and resume PDF in the same folder. Job branches are **not merged** into `gh-pages`. Changes that recur across job branches (fixes, confirmed facts, generic rewrites) are promoted through a dedicated `update/<topic>` branch and PR to `gh-pages` on the fork (`tylerwalts/resume`). The `job-research` skill (`.claude/skills/job-research/`) runs the whole workflow. `docs/` and `tmp/` are excluded from the Jekyll build.
 
 ## Styling
 
