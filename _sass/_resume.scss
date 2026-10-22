@@ -206,15 +206,28 @@
         font-size: 0.7rem;
       }
     }
-    // A button that looks like the links around it
-    .icon-button {
-      padding: 0;
-      border: none;
-      background: none;
-      font: inherit;
-      text-align: left;
-      cursor: pointer;
-    }
+  }
+}
+
+// Save as PDF, tucked into the top-right corner above the contact info
+.pdf-button {
+  @include sans_bold;
+  position: absolute;
+  top: 0.35rem;
+  right: 0;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 0.6rem;
+  color: #888;
+  cursor: pointer;
+  @include transition(color .2s ease);
+  &:hover {
+    color: #000;
   }
 }
 

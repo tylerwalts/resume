@@ -4,6 +4,8 @@
   <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %}">
     <div class="wrapper" itemscope itemtype="http://schema.org/Person">
       <header class="page-header">
+        <!-- Save as PDF: opens the browser's print dialog, whose destinations include Save as PDF, so the copy always matches this page -->
+        <button type="button" class="pdf-button screen-only" onclick="window.print()">{% include icons/icon-download.html %} <span>Save as PDF</span></button>
         {% if site.data.profile.avatar == 'true' %}
         <img src="images/avatar-2026.png" alt="Tyler Photo" class="avatar no-print" itemprop="image">
         {% endif %}
