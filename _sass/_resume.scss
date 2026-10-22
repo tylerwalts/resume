@@ -206,6 +206,22 @@
         font-size: 0.7rem;
       }
     }
+    // A button that looks like the links around it
+    .icon-button {
+      padding: 0;
+      border: none;
+      background: none;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+  }
+}
+
+// On screen only: controls like Save as PDF stay out of the printed copy
+.screen-only {
+  @media print {
+    display: none !important;
   }
 }
 
