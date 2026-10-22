@@ -20,7 +20,9 @@ bundle install
 
 ### Running Locally
 ```bash
-bundle exec jekyll serve
+make            # same as `make run`: bundle install, then jekyll serve --livereload
+make sandbox    # serve with usage events sent to the sandbox beacon
+make help       # list all targets
 ```
 Site will be available at `http://localhost:4000`
 
