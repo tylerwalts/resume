@@ -1,6 +1,6 @@
 ---
 name: job-research
-description: Research a job posting and its company (coworkers, hiring manager, new vs backfill, team, tech stack, cloud), save it to docs/<company>/<role>.md on a dedicated job/* branch, tailor the resume variant there, print it to PDF, draft a cover letter, and flag edits that recur across job branches for escalation to gh-pages. Use when given a job posting URL or asked to research or tailor for a specific role.
+description: Research a job posting and its company (coworkers, hiring manager, new vs backfill, team, tech stack, cloud, financial health from SEC filings), save it to docs/<company>/<role>.md on a dedicated job/* branch, tailor the resume variant there, print it to PDF, draft a cover letter, and flag edits that recur across job branches for escalation to gh-pages. Use when given a job posting URL or asked to research or tailor for a specific role.
 ---
 
 # Job research and resume variant
@@ -42,11 +42,67 @@ For each one, label every claim **Confirmed** (a primary source says it) or **In
 
 Also gather company context: funding or IPO status, revenue, headcount, open-job count, and recent layoffs or reorganizations.
 
-## 4. Fit analysis
+## 4. Financial health
+
+Check whether the company publishes financial reports, and analyze them through the user's lens: **is this a financially healthy, growing, successful company to join?**
+
+**Find the filings.**
+- **Public companies, or those going public by IPO or SPAC merger:** search SEC EDGAR. The submissions index lists every filing:
+
+  ```
+  https://data.sec.gov/submissions/CIK<10-digit CIK>.json
+  ```
+
+  If the company is merging with a SPAC, the filings are under the SPAC's name and CIK, not the company's.
+- **Which filing to use:**
+  - 10-K (annual) and 10-Q (quarterly) for public companies.
+  - S-1 for an IPO.
+  - S-4 for a SPAC or other merger. Prefer the latest S-4/A, or the final 424B3 prospectus; the original S-4 often leaves the interim numbers blank.
+  - 8-K for recent events such as executive changes or layoffs.
+- **Private companies:** Form D filings on EDGAR show funding rounds. Otherwise use press coverage of funding, layoffs and leadership changes, and say clearly that no audited financials are available.
+
+**Downloading.** SEC blocks scripted requests that lack a User-Agent with a contact email. Don't send the user's email anywhere without asking. Use AskUserQuestion, offering:
+- the public email from `_data/profile.yml`, or
+- "Don't send an email": give the user the filing links to open in a browser and save as PDF to `tmp/`.
+
+Never route around the block with a browser user-agent.
+
+**Extracting.** For a saved PDF:
+
+```bash
+swift .claude/skills/job-research/pdf-text.swift tmp/<file>.pdf <scratchpad>/filing.txt
+```
+
+The script marks each PDF page. Find sections through the filing's table of contents; the printed page numbers are offset from the PDF's. Read the company's own financial discussion (MD&A), financial statements and notes, the business description, risk factors, management, executive compensation and related-party transactions. Grep for specific terms rather than reading all of it.
+
+**What to cover.**
+- **Core numbers:** revenue (trade vs related party), gross margin, opex by line, operating loss, cash burn, cash on hand, accumulated deficit, headcount, revenue per employee.
+- **Unusual line items:** explain any jump or odd liability from the notes. For example, a jump in SG&A may be mostly non-cash stock comp; option "award liabilities" may come from a company repurchase right.
+- **Health signals:**
+  - a going-concern paragraph in the audit report;
+  - material weaknesses in internal controls;
+  - restatements;
+  - customer concentration;
+  - runway versus planned spending;
+  - new long-term commitments such as leases.
+- **Growth case:** backlog or committed orders, the conditions attached to them, and timing conflicts between sections.
+- **Equity for the user:** how options are valued and how they convert in a merger, repurchase rights, and dilution.
+- **Unusual items:** related-party deals, special preferred-stock terms, write-downs, executive turnover, unit economics that only hold at target costs.
+- **Relevance to the role:** what the filing says about the product, the team, the cloud provider, and the executive the role likely reports under.
+
+**Accuracy rules.**
+- Cite the filing's printed page numbers, and check them against the extracted text.
+- Attribute each finding to its source. The **auditor's report** (opinion, going concern) is different from the **company's own disclosures** (material weaknesses are usually in the risk factors), and both are different from **pro forma** figures.
+- Mark your own calculations and inferences as such.
+- Note which filing version you used and what it leaves out.
+
+Save the result as `docs/<company-slug>/<filing>-analysis.md`. Start with the bottom line (healthy / growing / successful) and end with questions to ask in interviews. Summarize it in the research doc's "Company context" section.
+
+## 5. Fit analysis
 
 Compare against `_data/*.yml`. List strong overlaps with evidence from specific bullets, honest gaps, and interview talking points. Don't suggest adding a skill or claim the user hasn't confirmed they have.
 
-## 5. Save the research
+## 6. Save the research
 
 Write `docs/<company-slug>/<role-slug>.md` using this outline:
 
@@ -74,16 +130,16 @@ Legend: **Confirmed** = stated in a primary source. **Inferred** = my reading of
 
 Sources go last, as markdown links. Include ATS job IDs for the related postings you used.
 
-## 6. Tailor the resume (light touch)
+## 7. Tailor the resume (light touch)
 
-- Edit only `_data/*.yml`. Template and style changes don't belong on a job branch; see step 10.
+- Edit only `_data/*.yml`. Template and style changes don't belong on a job branch; see step 11.
 - Typical levers: the `profile.yml` title, summary and highlights; bullet wording and order to surface relevant work; skill category names.
 - Keep bullet length within the existing line budget (~125 characters at desktop width), so a bullet doesn't wrap to a new line.
 - Don't invent facts. Any reworded claim the user hasn't confirmed goes in a "Claims to verify" list in the research doc and in your reply.
 - Build to check: `eval "$(rvm env 2.3)"; bundle exec jekyll build -d <scratchpad>/site`.
 - Fill in the doc's "Resume changes on this branch" section.
 
-## 7. Print the PDF
+## 8. Print the PDF
 
 Once the user is happy with the tailored resume, print the submission copy:
 
@@ -96,7 +152,7 @@ The script builds the branch, serves it locally and prints it with headless Chro
 - Read the page count it reports. The resume is normally 3 pages; a jump means something wrapped badly.
 - Rasterize the pages and look at them. PDFKit via `swift` works without extra installs; ImageMagick needs Ghostscript, which isn't installed. Check for orphaned section headings, a page break inside the header block, and missing fonts. Missing fonts look like system serif text and mean `--virtual-time-budget` was too short.
 
-## 8. Draft the cover letter
+## 9. Draft the cover letter
 
 **Ask first.** Before drafting, use AskUserQuestion to ask what personal reason to add to the motivation for working there. Offer 2–4 options drawn from the research, for example:
 
@@ -123,11 +179,11 @@ Rules:
 - If the posting asks for a story ("describe what slipped"), save it for the interview and say so in your reply.
 - In your reply, include a table mapping posting requirements to the evidence used, plus anything to verify before sending.
 
-## 9. Commit
+## 10. Commit
 
-Commit the `_data/` edits, the research doc, the PDF and the cover letter in `docs/<company>/` together on the job branch. Never commit other untracked files under `docs/` or `tmp/`. Don't push or open a PR for a job branch unless asked. Job branches never target `gh-pages`.
+Commit the `_data/` edits, the research doc, any financial analysis, the PDF and the cover letter in `docs/<company>/` together on the job branch. Never commit other untracked files under `docs/` or `tmp/`. Don't push or open a PR for a job branch unless asked. Job branches never target `gh-pages`.
 
-## 10. Trend check and escalation
+## 11. Trend check and escalation
 
 After tailoring, compare this branch with the other job branches:
 
