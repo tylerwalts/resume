@@ -1,0 +1,4 @@
+# Sends usage analytics from a local `jekyll serve` to the sandbox beacon, for testing:
+#   bundle exec jekyll serve --config _config.yml,_config.sandbox.yml
+usage_sandbox: true
+usage_endpoint: https://tyler.sandbox.tylerwalts.com/api/resume/pageview

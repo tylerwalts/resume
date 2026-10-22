@@ -77,6 +77,12 @@ The site is deployed to GitHub Pages from the `gh-pages` branch. Push commits to
 
 Custom domain configured via `CNAME` file pointing to `resume.tylerwalts.com`.
 
+## Usage Analytics
+
+`_includes/usage.html` posts a page view and reading events (`engaged` after 30 s visible, `print`, `pdf`) to `https://tylerwalts.com/api/resume/pageview`, a beacon defined in the `tylerwaltersconsulting` monorepo (`tylerwalts-web-infra`). The counts show in the "Usage — resume.tylerwalts.com" section of the tylerwalts.com CloudWatch dashboard. Only production (GitHub Pages) builds send anything. To test against sandbox, run `bundle exec jekyll serve --config _config.yml,_config.sandbox.yml`.
+
+Link to the resume as `https://resume.tylerwalts.com/?ref=<company-slug>` in applications and cover letters, so the dashboard shows which application each visit came from. A ref is letters, digits, `-` and `_` only, up to 64 characters.
+
 ## Job-Specific Branches
 
 Each job application gets its own `job/<company>-<role>` branch, holding a tailored resume (`_data/` edits only), research at `docs/<company>/<role>.md`, and a cover letter and resume PDF in the same folder. Job branches are **not merged** into `gh-pages`. Changes that recur across job branches (fixes, confirmed facts, generic rewrites) are promoted through a dedicated `update/<topic>` branch and PR to `gh-pages` on the fork (`tylerwalts/resume`). The `job-research` skill (`.claude/skills/job-research/`) runs the whole workflow. `docs/` and `tmp/` are excluded from the Jekyll build.
