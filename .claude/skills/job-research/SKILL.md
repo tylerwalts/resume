@@ -1,6 +1,6 @@
 ---
 name: job-research
-description: Research a job posting and its company (coworkers, hiring manager, new vs backfill, team, tech stack, cloud), save it to docs/<company>/<role>.md on a dedicated job/* branch, tailor the resume variant there, and flag edits that recur across job branches for escalation to gh-pages. Use when given a job posting URL or asked to research or tailor for a specific role.
+description: Research a job posting and its company (coworkers, hiring manager, new vs backfill, team, tech stack, cloud), save it to docs/<company>/<role>.md on a dedicated job/* branch, tailor the resume variant there, print it to PDF for submission, and flag edits that recur across job branches for escalation to gh-pages. Use when given a job posting URL or asked to research or tailor for a specific role.
 ---
 
 # Job research and resume variant
@@ -76,18 +76,31 @@ Sources go last, as markdown links. Include ATS job IDs for the related postings
 
 ## 6. Tailor the resume (light touch)
 
-- Edit only `_data/*.yml`. Template and style changes don't belong on a job branch; see step 8.
+- Edit only `_data/*.yml`. Template and style changes don't belong on a job branch; see step 9.
 - Typical levers: the `profile.yml` title, summary and highlights; bullet wording and order to surface relevant work; skill category names.
 - Keep bullet length within the existing line budget (~125 characters at desktop width), so a bullet doesn't wrap to a new line.
 - Don't invent facts. Any reworded claim the user hasn't confirmed goes in a "Claims to verify" list in the research doc and in your reply.
 - Build to check: `eval "$(rvm env 2.3)"; bundle exec jekyll build -d <scratchpad>/site`.
 - Fill in the doc's "Resume changes on this branch" section.
 
-## 7. Commit
+## 7. Print the PDF
 
-Commit the `_data/` edits and `docs/<company>/` together on the job branch. Never commit other untracked files under `docs/` or `tmp/`. Don't push or open a PR for a job branch unless asked. Job branches never target `gh-pages`.
+Once the user is happy with the tailored resume, print the submission copy:
 
-## 8. Trend check and escalation
+```bash
+.claude/skills/job-research/print-pdf.sh "docs/<company-slug>/Tyler Walters - Resume - <Company>.pdf"
+```
+
+The script builds the branch, serves it locally and prints it with headless Chrome. The settings match a manual Chrome "Save as PDF": US Letter, background graphics on, no header or footer. Then check the result:
+
+- Read the page count it reports. The resume is normally 3 pages; a jump means something wrapped badly.
+- Rasterize the pages and look at them. PDFKit via `swift` works without extra installs; ImageMagick needs Ghostscript, which isn't installed. Check for orphaned section headings, a page break inside the header block, and missing fonts. Missing fonts look like system serif text and mean `--virtual-time-budget` was too short.
+
+## 8. Commit
+
+Commit the `_data/` edits, the research doc and the PDF in `docs/<company>/` together on the job branch. Never commit other untracked files under `docs/` or `tmp/`. Don't push or open a PR for a job branch unless asked. Job branches never target `gh-pages`.
+
+## 9. Trend check and escalation
 
 After tailoring, compare this branch with the other job branches:
 
