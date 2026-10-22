@@ -8,7 +8,6 @@
     - title: "Technology Strategy"
       bullets:
         - "Defined Ascend Data & SaaS platform technical roadmap with CTO, aligning engineering investment to business growth."
-        - "Transformed legacy data services to a SaaS product model, unlocking Ascend 2.0 as a commercially scalable platform."
         - "Created SDLC using a trunk-based multi-language monorepo with app and infrastructure CI/CD pipelines; top contributor across ~7k commits from 100+ engineers."
     - title: "Platform Engineering"
       bullets:
@@ -17,11 +16,17 @@
         - "Designed HIPAA/SOC2 Iceberg lakehouse on Glue/PySpark, Airflow and Lake Formation with shared libraries, de-identification and CI/CD."
         - "Built Self-Service, the internal operations product for Ascend 2.0 — React UI over ~20 microservice APIs for ingestion, lineage, pipeline status and audited data access with SSO."
         - "Built internal developer automations reducing engineer onboarding from 4w to 1d with automated provisioning, sandboxes and tooling."
+    - title: "Reliability, Security & Cost"
+      bullets:
+        - "Owned HIPAA/SOC2 security posture for Ascend 2.0, including audit evidence, security tooling and customer questionnaires."
+        - "Established SLOs, on-call rotations, incident post-mortems and disaster recovery plans for production SaaS and data services."
+        - "Made ECS vs EKS container platform decisions for microservice and data workloads across the AWS multi-account landing zone."
+        - "Drove AWS cost reduction with per-unit and per-team cost visibility across accounts, reported to engineering leadership."
     - title: "AI Transformation"
       bullets:
         - "Established AI governance and guardrails enabling autonomous SDLC within HIPAA/SOC2."
         - "Built production AI agents for pipeline triage, hypercare monitoring and data ingestion, with human-in-the-loop approvals, caller-scoped MCP tool access and PHI scanning."
     - title: "Organizational Leadership"
       bullets:
-        - "Helped scale engineering from 8 to 45 full time employees plus onshore/offshore vendor teams through structured hiring, onboarding automation and career coaching."
+        - "Helped scale a distributed engineering org from 8 to 45 full time employees plus onshore/offshore vendor teams through structured hiring, onboarding automation and career coaching."
         - "Led 16-person team as Director of Data Platform Engineering, owning product roadmap and operations."

@@ -17,13 +17,13 @@
   skill_items:
     - name: "Distributed Systems"
       rating: 5
-    - name: "Cloud Platforms"
+    - name: "Cloud Infrastructure"
       rating: 5
     - name: "Data Platforms"
       rating: 4
     - name: "Developer Experience"
       rating: 5
-    - name: "Enterprise Architecture"
+    - name: "Security & Compliance"
       rating: 5
 
 - name: "Languages"
@@ -41,7 +41,7 @@
   skill_items:
     - name: "AWS CDK"
       rating: 4
-    - name: "Spark/Iceberg"
+    - name: "ECS/EKS"
       rating: 4
     - name: "Airflow"
       rating: 4
