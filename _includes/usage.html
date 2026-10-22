@@ -1,0 +1,89 @@
+{% comment %}
+  Usage analytics: posts page views and reading events to the beacon on tylerwalts.com, which feeds the
+  tylerwalts.com CloudWatch dashboard. Only GitHub Pages (production) builds and the sandbox config send
+  anything, so `jekyll serve` and print-pdf.sh builds stay silent.
+{% endcomment %}
+{% if jekyll.environment == "production" or site.usage_sandbox %}
+<script>
+  (function () {
+    var ENDPOINT = {{ site.usage_endpoint | jsonify }};
+    var VISITOR_KEY = 'resume_visitor_id';
+    var REF_KEY = 'resume_ref';
+    var REF_PATTERN = /^[A-Za-z0-9_-]{1,64}$/;
+    var ENGAGED_MS = 30000;
+
+    // A random first-party ID that lets the dashboard count unique browsers. Without storage
+    // (private mode, blocked site data) each page load counts as a new visitor
+    function remember(key, value) {
+      try {
+        if (value) localStorage.setItem(key, value);
+        return value || localStorage.getItem(key);
+      } catch (e) {
+        return value;
+      }
+    }
+
+    var visitorId = remember(VISITOR_KEY, null) || remember(VISITOR_KEY, crypto.randomUUID());
+
+    // The ?ref=<company> on the link sent with an application. Kept for later visits from the same browser
+    var urlRef = new URLSearchParams(location.search).get('ref');
+    var ref = remember(REF_KEY, urlRef && REF_PATTERN.test(urlRef) ? urlRef : null) || undefined;
+
+    var sent = {};
+    // Each event once per page load. The beacon sits behind CloudFront origin access control, which signs the body, so it needs the body's SHA-256
+    function send(event) {
+      if (sent[event]) return;
+      sent[event] = true;
+
+      var body = JSON.stringify({ path: location.pathname, visitorId: visitorId, ref: ref, event: event });
+      crypto.subtle
+        .digest('SHA-256', new TextEncoder().encode(body))
+        .then(function (digest) {
+          var hash = Array.from(new Uint8Array(digest), function (b) {
+            return b.toString(16).padStart(2, '0');
+          }).join('');
+
+          return fetch(ENDPOINT, { method: 'POST', body: body, headers: { 'content-type': 'text/plain', 'x-amz-content-sha256': hash }, keepalive: true });
+        })
+        .catch(function () {
+          // Analytics must never break the page
+        });
+    }
+
+    send('view');
+
+    // Engaged: the page has been visible for 30 seconds in total, so it was likely read rather than bounced
+    var visibleMs = 0;
+    var visibleSince = document.visibilityState === 'visible' ? Date.now() : null;
+    var engagedTimer;
+    function scheduleEngaged() {
+      clearTimeout(engagedTimer);
+      if (visibleSince !== null) {
+        engagedTimer = setTimeout(function () {
+          send('engaged');
+        }, Math.max(0, ENGAGED_MS - visibleMs));
+      }
+    }
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'visible') {
+        visibleSince = Date.now();
+      } else if (visibleSince !== null) {
+        visibleMs += Date.now() - visibleSince;
+        visibleSince = null;
+      }
+      scheduleEngaged();
+    });
+    scheduleEngaged();
+
+    // Printing, including the browser's "Save as PDF"
+    window.addEventListener('beforeprint', function () {
+      send('print');
+    });
+
+    // A download of a linked PDF copy, if the page offers one
+    document.addEventListener('click', function (e) {
+      if (e.target.closest && e.target.closest('a[href$=".pdf"]')) send('pdf');
+    });
+  })();
+</script>
+{% endif %}

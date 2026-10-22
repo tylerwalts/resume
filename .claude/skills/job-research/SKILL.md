@@ -174,6 +174,7 @@ Write `docs/<company-slug>/cover-letter.md`, about 400–450 words, in this shap
 
 Rules:
 
+- Link to the resume as `https://resume.tylerwalts.com/?ref=<company-slug>`, so the usage dashboard attributes the visit to this application.
 - Every claim must already be on the resume or confirmed by the user. Don't stretch titles, team sizes or scope.
 - Keep required qualifications the resume doesn't clearly show (e.g. managing managers) out of the letter. List them in your reply so the user can add a sentence if true.
 - If the posting asks for a story ("describe what slipped"), save it for the interview and say so in your reply.

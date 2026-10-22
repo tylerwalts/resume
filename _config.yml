@@ -8,6 +8,9 @@ sass:
   sass_dir: _sass
   style: compressed
 
+# Usage analytics beacon (see _includes/usage.html); _config.sandbox.yml points it at sandbox
+usage_endpoint: https://tylerwalts.com/api/resume/pageview
+
 # Design settings
 resume_theme: default
 
