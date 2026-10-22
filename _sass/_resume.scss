@@ -8,6 +8,11 @@
   @include section_border;
   margin-top: 0;
   margin-bottom: 0.3rem;
+  // Keep a section heading on the same printed page as its first item
+  @media print {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
 
   h2 {
     @include sans_extrabold;
@@ -279,6 +284,15 @@
     font-size: 0.65rem;
     margin: 0.3rem 0 0.1rem;
     letter-spacing: -.02rem;
+  }
+
+  // Keep job titles and subsection headings with the lines that follow them
+  .resume-item-title,
+  .resume-item-subsection {
+    @media print {
+      break-after: avoid;
+      page-break-after: avoid;
+    }
   }
 
   .resume-item-list {
