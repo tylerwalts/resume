@@ -18,7 +18,7 @@
   subsections:
     - title: "Hyperscale Distributed Systems (sellercentral.amazon.com)"
       bullets:
-        - "Scaled data routing service to 340K TPS at 50ms latency managing 1.6 TB of seller inventory data from 14 high-volume event sources."
+        - "Scaled data routing service to 320K TPS at 50ms latency managing 1.6 PB of seller inventory data from 14 high-volume event sources."
         - "Led modernization of 160+ data clients across 90 teams, driving 30% reduction in high-severity tickets."
     - title: "Enterprise Modernization (aws.amazon.com/training)"
       bullets:
@@ -36,7 +36,7 @@
   start: "2016"
   end: "2018"
   location: "Portland, OR"
-  description: "Scaled an agency-created retail experience POC to 8 flagship Nike locations across US, Europe and China, supporting digitally enhanced AR running and basketball experiences."
+  description: "Scaled an agency-created retail experience POC to 9 flagship Nike locations across US, Europe and China, supporting digitally enhanced AR running and basketball experiences."
   bullets:
     - "Built CI/CD for on-site server fleets with Kinect sensors, video streams and game engines supported by cloud monitoring."
     - "Built media content delivery system and coordinated new content pack releases timed to each new shoe drop."
